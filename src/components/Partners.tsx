@@ -17,6 +17,9 @@ const partners = [
   { name: 'Synology', logo: 'https://picsum.photos/seed/logo7/150/40?grayscale' },
   { name: 'Shelly', logo: 'https://picsum.photos/seed/logo8/150/40?grayscale' },
   { name: 'Tado', logo: 'https://picsum.photos/seed/logo9/150/40?grayscale' },
+  { name: 'EcoFlow', logo: 'https://picsum.photos/seed/logo10/150/40?grayscale' },
+  { name: 'Zendure', logo: 'https://picsum.photos/seed/logo11/150/40?grayscale' },
+  { name: 'Jackery', logo: 'https://picsum.photos/seed/logo12/150/40?grayscale' },
 ];
 
 export function Partners() {
@@ -42,7 +45,7 @@ export function Partners() {
                     >
                         <CarouselContent>
                             {partners.map((partner, index) => (
-                                <CarouselItem key={index} className="basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6">
+                                <CarouselItem key={index} className="basis-1/4 sm:basis-1/5 md:basis-1/6 lg:basis-1/8">
                                     <div className="flex justify-center p-4">
                                         <Image
                                             src={partner.logo}
