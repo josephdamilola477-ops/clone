@@ -25,19 +25,19 @@ export function Footer() {
           <div className="md:col-span-1">
             <h3 className="font-semibold mb-4 text-foreground text-sm tracking-widest">SHOP</h3>
             <ul className="space-y-3">
-              <li><Link href="#" className="text-sm hover:text-primary">Terms and Conditions</Link></li>
-              <li><Link href="#" className="text-sm hover:text-primary">imprint</Link></li>
-              <li><Link href="#" className="text-sm hover:text-primary">Privacy Policy</Link></li>
-              <li><Link href="#" className="text-sm hover:text-primary">Right of withdrawal & withdrawal form</Link></li>
-              <li><Link href="#" className="text-sm hover:text-primary">Payment information</Link></li>
+              <li><Link href="/terms-and-conditions" className="text-sm hover:text-primary">Terms and Conditions</Link></li>
+              <li><Link href="/imprint" className="text-sm hover:text-primary">imprint</Link></li>
+              <li><Link href="/privacy-policy" className="text-sm hover:text-primary">Privacy Policy</Link></li>
+              <li><Link href="/withdrawal" className="text-sm hover:text-primary">Right of withdrawal & withdrawal form</Link></li>
+              <li><Link href="/payment-information" className="text-sm hover:text-primary">Payment information</Link></li>
             </ul>
           </div>
           <div className="md:col-span-1">
             <h3 className="font-semibold mb-4 text-foreground text-sm tracking-widest">SERVICES</h3>
             <ul className="space-y-3">
-              <li><Link href="#" className="text-sm hover:text-primary">Returns portal</Link></li>
-              <li><Link href="#" className="text-sm hover:text-primary">Info zero tax rate PV systems</Link></li>
-              <li><Link href="#" className="text-sm hover:text-primary">contact</Link></li>
+              <li><Link href="/returns-portal" className="text-sm hover:text-primary">Returns portal</Link></li>
+              <li><Link href="/info-zero-tax" className="text-sm hover:text-primary">Info zero tax rate PV systems</Link></li>
+              <li><Link href="/contact" className="text-sm hover:text-primary">contact</Link></li>
             </ul>
           </div>
         </div>
@@ -47,12 +47,12 @@ export function Footer() {
             <div className="flex flex-col md:flex-row items-center gap-x-6 gap-y-4 text-xs text-muted-foreground order-2 md:order-1 mt-8 md:mt-0">
                 <p>&copy; {new Date().getFullYear()} MarcMax Shop.</p>
                 <div className="flex flex-wrap justify-center gap-x-4">
-                    <Link href="#" className="hover:text-primary">Right of withdrawal</Link>
-                    <Link href="#" className="hover:text-primary">Privacy Policy</Link>
-                    <Link href="#" className="hover:text-primary">Terms and Conditions</Link>
+                    <Link href="/withdrawal" className="hover:text-primary">Right of withdrawal</Link>
+                    <Link href="/privacy-policy" className="hover:text-primary">Privacy Policy</Link>
+                    <Link href="/terms-and-conditions" className="hover:text-primary">Terms and Conditions</Link>
                     <Link href="#" className="hover:text-primary">Shipment</Link>
-                    <Link href="#" className="hover:text-primary">Contact information</Link>
-                    <Link href="#" className="hover:text-primary">imprint</Link>
+                    <Link href="/contact" className="hover:text-primary">Contact information</Link>
+                    <Link href="/imprint" className="hover:text-primary">imprint</Link>
                 </div>
             </div>
             <div className="flex items-center gap-x-4 order-1 md:order-2">
