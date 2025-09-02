@@ -1,16 +1,19 @@
-import Image from 'next/image';
 import { Button } from './ui/button';
 
 export function Location() {
   return (
     <section className="relative h-[60vh] min-h-[500px] w-full flex items-center">
-      <Image
-        src="https://picsum.photos/seed/map/1800/600"
-        alt="Map showing warehouse location"
-        fill
-        className="object-cover"
-        data-ai-hint="map location"
-      />
+      <div className="absolute inset-0">
+        <iframe
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          scrolling="no"
+          marginHeight={0}
+          marginWidth={0}
+          src="https://maps.google.com/maps?q=Stuttgarter%20Str.%2069,%2074321%20Bietigheim-Bissingen&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        ></iframe>
+      </div>
       <div className="absolute inset-0 bg-black/10" />
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white p-8 max-w-md shadow-2xl">
