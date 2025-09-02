@@ -7,6 +7,7 @@ import { Features } from "@/components/Features";
 import { Categories } from "@/components/Categories";
 import { Balkonkraftwerk } from "@/components/Balkonkraftwerk";
 import { Nanoleaf } from "@/components/Nanoleaf";
+import { AboutUs } from "@/components/AboutUs";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Balkonkraftwerk />
         <Nanoleaf />
         <Partners />
+        <AboutUs />
         <Features />
         <Categories />
       </main>
