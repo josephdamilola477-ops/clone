@@ -5,7 +5,7 @@ export function Location() {
   return (
     <section className="relative h-[60vh] min-h-[500px] w-full flex items-center">
       <Image
-        src="https://picsum.photos/seed/map/1800/600"
+        src="https://storage.googleapis.com/project-spark-prod/project_prod_823193275027/2024-08-14T10:55:04.996Z_19195.png"
         alt="Map showing warehouse location"
         fill
         className="object-cover"
