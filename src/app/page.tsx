@@ -1,8 +1,7 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Projects } from "@/components/Projects";
-import { About } from "@/components/About";
-import { Contact } from "@/components/Contact";
+import { ProductHighlight } from "@/components/ProductHighlight";
+import { Partners } from "@/components/Partners";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -11,9 +10,8 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <Projects />
-        <About />
-        <Contact />
+        <ProductHighlight />
+        <Partners />
       </main>
       <Footer />
     </div>

@@ -1,12 +1,29 @@
+import Image from 'next/image';
+import { Button } from './ui/button';
+
 export function Hero() {
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 text-center">
-      <h1 className="text-4xl md:text-6xl font-bold text-primary tracking-tight">
-        Hey, I'm Max.
-      </h1>
-      <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-        I'm a designer and developer passionate about creating beautiful, functional, and user-centered digital experiences.
-      </p>
+    <section className="relative h-[600px] md:h-[700px] w-full">
+      <Image
+        src="https://picsum.photos/seed/hero/1800/800"
+        alt="Person in a van with a portable power station"
+        fill
+        className="object-cover"
+        priority
+        data-ai-hint="camping power station"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight max-w-2xl">
+          Power Your Life, Anywhere
+        </h1>
+        <p className="mt-4 text-lg md:text-xl max-w-xl">
+          Discover our range of portable power stations and solar solutions.
+        </p>
+        <Button size="lg" className="mt-8">
+          Shop Now
+        </Button>
+      </div>
     </section>
   );
 }
