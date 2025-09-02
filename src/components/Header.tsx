@@ -116,8 +116,8 @@ export function Header() {
           </div>
 
           <nav className="hidden md:flex flex-1 justify-center items-center space-x-8">
-            <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">ANGEBOT ANFRAGEN</Link>
-            <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">KONTAKT</Link>
+            <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">ANGEBOT ANFRAGEN</Link>
+            <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">KONTAKT</Link>
             <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">%OUTLET%</Link>
           </nav>
           
@@ -147,8 +147,8 @@ export function Header() {
                     </Button>
                   </div>
                   <nav className="flex-1 flex flex-col gap-4 p-4">
-                    <Link href="#" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>ANGEBOT ANFRAGEN</Link>
-                    <Link href="#" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>KONTAKT</Link>
+                    <Link href="/contact" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>ANGEBOT ANFRAGEN</Link>
+                    <Link href="/contact" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>KONTAKT</Link>
                     <Link href="#" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>%OUTLET%</Link>
                   </nav>
                   <div className="p-4 border-t flex justify-around">
