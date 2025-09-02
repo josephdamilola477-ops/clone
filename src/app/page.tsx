@@ -5,6 +5,7 @@ import { Partners } from "@/components/Partners";
 import { Footer } from "@/components/Footer";
 import { Features } from "@/components/Features";
 import { Categories } from "@/components/Categories";
+import { Balkonkraftwerk } from "@/components/Balkonkraftwerk";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Aktionsprodukte />
+        <Balkonkraftwerk />
         <Features />
         <Categories />
         <Partners />
