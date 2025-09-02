@@ -1,63 +1,85 @@
 import Link from 'next/link';
 import { Button } from './ui/button';
-import { Globe, Zap } from 'lucide-react';
+import { Globe, ChevronDown } from 'lucide-react';
+import Image from 'next/image';
+
+const paymentMethods = [
+  { name: 'American Express', logo: 'https://picsum.photos/seed/amex/64/40' },
+  { name: 'Apple Pay', logo: 'https://picsum.photos/seed/applepay/64/40' },
+  { name: 'eps', logo: 'https://picsum.photos/seed/eps/64/40' },
+  { name: 'Google Pay', logo: 'https://picsum.photos/seed/gpay/64/40' },
+  { name: 'Klarna', logo: 'https://picsum.photos/seed/klarna/64/40' },
+  { name: 'Mastercard', logo: 'https://picsum.photos/seed/mastercard/64/40' },
+  { name: 'PayPal', logo: 'https://picsum.photos/seed/paypal/64/40' },
+  { name: 'Shop Pay', logo: 'https://picsum.photos/seed/shoppay/64/40' },
+  { name: 'UnionPay', logo: 'https://picsum.photos/seed/unionpay/64/40' },
+  { name: 'Visa', logo: 'https://picsum.photos/seed/visa/64/40' },
+];
+
 
 export function Footer() {
   return (
-    <footer className="bg-secondary border-t">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
-          <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
-             <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-foreground">
-              <Zap className="h-7 w-7 text-primary" />
-              PowerHub
-            </Link>
-            <p className="text-muted-foreground text-sm mt-4">Powering your life, anywhere.</p>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-4 text-foreground">Shop</h3>
-            <ul className="space-y-2">
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary">Portable Power</Link></li>
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary">Solar Panels</Link></li>
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary">Accessories</Link></li>
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary">Home Backup</Link></li>
+    <footer className="bg-background text-foreground/80 border-t pt-16 pb-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="md:col-span-1">
+            <h3 className="font-semibold mb-4 text-foreground text-sm tracking-widest">SHOP</h3>
+            <ul className="space-y-3">
+              <li><Link href="#" className="text-sm hover:text-primary">Terms and Conditions</Link></li>
+              <li><Link href="#" className="text-sm hover:text-primary">imprint</Link></li>
+              <li><Link href="#" className="text-sm hover:text-primary">Privacy Policy</Link></li>
+              <li><Link href="#" className="text-sm hover:text-primary">Right of withdrawal & withdrawal form</Link></li>
+              <li><Link href="#" className="text-sm hover:text-primary">Payment information</Link></li>
             </ul>
           </div>
-          <div>
-            <h3 className="font-semibold mb-4 text-foreground">About</h3>
-            <ul className="space-y-2">
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary">Our Story</Link></li>
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary">Careers</Link></li>
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary">Press</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-4 text-foreground">Support</h3>
-            <ul className="space-y-2">
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary">Contact Us</Link></li>
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary">FAQ</Link></li>
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary">Shipping & Returns</Link></li>
-            </ul>
-          </div>
-           <div>
-            <h3 className="font-semibold mb-4 text-foreground">Connect</h3>
-            <ul className="space-y-2">
-                 <li>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary">LinkedIn</a>
-                 </li>
-                 <li>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary">Instagram</a>
-                 </li>
+          <div className="md:col-span-1">
+            <h3 className="font-semibold mb-4 text-foreground text-sm tracking-widest">SERVICES</h3>
+            <ul className="space-y-3">
+              <li><Link href="#" className="text-sm hover:text-primary">Returns portal</Link></li>
+              <li><Link href="#" className="text-sm hover:text-primary">Info zero tax rate PV systems</Link></li>
+              <li><Link href="#" className="text-sm hover:text-primary">contact</Link></li>
             </ul>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} PowerHub. All Rights Reserved.</p>
-            <div className="flex items-center gap-4 mt-4 sm:mt-0">
-                <Button variant="ghost" size="sm" className="gap-2">
-                    <Globe size={16} /> English
+        
+        <div className="mt-16 pt-8 border-t">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
+            <div className="flex flex-col md:flex-row items-center gap-x-6 gap-y-4 text-xs text-muted-foreground order-2 md:order-1 mt-8 md:mt-0">
+                <p>&copy; {new Date().getFullYear()} MarcMax Shop.</p>
+                <div className="flex flex-wrap justify-center gap-x-4">
+                    <Link href="#" className="hover:text-primary">Right of withdrawal</Link>
+                    <Link href="#" className="hover:text-primary">Privacy Policy</Link>
+                    <Link href="#" className="hover:text-primary">Terms and Conditions</Link>
+                    <Link href="#" className="hover:text-primary">Shipment</Link>
+                    <Link href="#" className="hover:text-primary">Contact information</Link>
+                    <Link href="#" className="hover:text-primary">imprint</Link>
+                </div>
+            </div>
+            <div className="flex items-center gap-x-4 order-1 md:order-2">
+                <Button variant="ghost" size="sm" className="gap-2 text-xs">
+                    <Globe size={16} /> German <ChevronDown size={16} />
+                </Button>
+                <Button variant="ghost" size="sm" className="gap-2 text-xs">
+                    Germany (EUR €) <ChevronDown size={16} />
                 </Button>
             </div>
+          </div>
+
+          <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-2">
+            {paymentMethods.map((pm) => (
+                <div key={pm.name} className="bg-white border rounded-md p-2 flex items-center justify-center h-10">
+                    <Image
+                        src={pm.logo}
+                        alt={pm.name}
+                        width={40}
+                        height={24}
+                        className="object-contain"
+                        data-ai-hint="payment method"
+                    />
+                </div>
+            ))}
+          </div>
+
         </div>
       </div>
     </footer>
