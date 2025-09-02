@@ -43,17 +43,6 @@ export function PremiumBrands() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-            <div className="absolute top-full left-0 mt-12 space-x-3 flex">
-              <Button className="rounded-full h-12 shadow-lg bg-gray-800 hover:bg-gray-700 text-white pl-4 pr-5">
-                <div className="relative">
-                  <MessageSquareText size={20} />
-                </div>
-                <span>Chat</span>
-              </Button>
-              <Button className="rounded-full h-12 px-6 shadow-lg bg-green-600 hover:bg-green-700 text-white font-semibold">
-                Callback service
-              </Button>
-            </div>
           </div>
           <div>
             <Image
