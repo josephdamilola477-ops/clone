@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
-import { ShoppingCart, User, Menu, X, Search } from 'lucide-react';
+import { ShoppingCart, User, Menu, X, Search, Zap } from 'lucide-react';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 
@@ -26,7 +26,8 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center gap-8">
-            <Link href="/" className="text-2xl font-bold text-foreground">
+            <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-foreground">
+              <Zap className="h-7 w-7 text-primary" />
               PowerHub
             </Link>
             <nav className="hidden md:flex items-center space-x-8">
@@ -51,7 +52,8 @@ export function Header() {
               <SheetContent side="left" className="bg-background p-0">
                 <div className="flex flex-col h-full">
                   <div className="flex justify-between items-center p-4 border-b">
-                     <Link href="/" className="text-2xl font-bold text-foreground" onClick={() => setMobileMenuOpen(false)}>
+                     <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-foreground" onClick={() => setMobileMenuOpen(false)}>
+                        <Zap className="h-7 w-7 text-primary" />
                         PowerHub
                       </Link>
                     <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>

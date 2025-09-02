@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from './ui/button';
-import { Globe } from 'lucide-react';
+import { Globe, Zap } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -8,7 +8,8 @@ export function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
           <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
-             <Link href="/" className="text-2xl font-bold text-foreground">
+             <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-foreground">
+              <Zap className="h-7 w-7 text-primary" />
               PowerHub
             </Link>
             <p className="text-muted-foreground text-sm mt-4">Powering your life, anywhere.</p>

@@ -1,4 +1,4 @@
-import { Award, Box, ShieldCheck } from 'lucide-react';
+import { Award, Box, ShieldCheck, Zap } from 'lucide-react';
 
 const features = [
   {
@@ -20,7 +20,7 @@ const features = [
 
 export function Features() {
   return (
-    <section className="bg-background py-16">
+    <section className="bg-secondary/50 py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           {features.map((feature) => (
