@@ -115,13 +115,13 @@ export function Header() {
             </Link>
           </div>
 
-          <nav className="hidden md:flex items-center space-x-8 ml-8">
+          <nav className="hidden md:flex flex-1 justify-center items-center space-x-8">
             <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">ANGEBOT ANFRAGEN</Link>
             <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">KONTAKT</Link>
             <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">%OUTLET%</Link>
           </nav>
           
-          <div className="flex-1 flex items-center justify-end gap-2">
+          <div className="flex items-center justify-end gap-2">
             <Button variant="ghost" size="icon"><Search size={20}/></Button>
             <Button variant="ghost" size="icon"><User size={20}/></Button>
             <Button variant="ghost" size="icon"><ShoppingCart size={20}/></Button>
