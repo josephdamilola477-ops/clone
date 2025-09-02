@@ -17,9 +17,9 @@ export default function Home() {
         <Aktionsprodukte />
         <Balkonkraftwerk />
         <Nanoleaf />
+        <Partners />
         <Features />
         <Categories />
-        <Partners />
       </main>
       <Footer />
     </div>
