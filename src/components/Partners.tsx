@@ -27,9 +27,9 @@ export function Partners() {
 
                 <div className="mt-16 text-center">
                   <h3 className="text-2xl font-bold text-gray-800">Unsere Marken</h3>
-                  <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-8 items-center">
+                  <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-8 items-center justify-center">
                       {partners.slice(0, 7).map((partner) => (
-                          <div key={partner.name} className="flex justify-center p-4 border border-gray-200 rounded-lg">
+                          <div key={partner.name} className="flex justify-center">
                               <Image
                                   src={partner.logo}
                                   alt={partner.name}
@@ -42,9 +42,9 @@ export function Partners() {
                       ))}
                   </div>
                    <div className="mt-8 flex justify-center">
-                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-8 items-center">
+                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 items-center">
                         {partners.slice(7).map((partner) => (
-                            <div key={partner.name} className="flex justify-center p-4 border border-gray-200 rounded-lg">
+                            <div key={partner.name} className="flex justify-center">
                                 <Image
                                     src={partner.logo}
                                     alt={partner.name}
