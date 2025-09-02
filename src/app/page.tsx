@@ -9,6 +9,7 @@ import { Balkonkraftwerk } from "@/components/Balkonkraftwerk";
 import { Nanoleaf } from "@/components/Nanoleaf";
 import { AboutUs } from "@/components/AboutUs";
 import { PremiumBrands } from "@/components/PremiumBrands";
+import { Location } from "@/components/Location";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Products />
         <Nanoleaf />
         <PremiumBrands />
+        <Location />
       </main>
       <Footer />
     </div>
