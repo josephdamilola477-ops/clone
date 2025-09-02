@@ -1,11 +1,5 @@
 "use client";
 import Image from "next/image";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 
 const partners = [
   { name: 'Amper', logo: 'https://picsum.photos/seed/logo1/150/40?grayscale' },
@@ -29,37 +23,19 @@ export function Partners() {
                 <h2 className="text-center text-sm font-semibold text-muted-foreground tracking-wider uppercase">
                     Compatible with your favorite brands
                 </h2>
-                <div className="mt-10">
-                    <Carousel
-                        opts={{
-                            align: "start",
-                            loop: true,
-                        }}
-                         plugins={[
-                            Autoplay({
-                              delay: 2000,
-                              stopOnInteraction: false,
-                            }),
-                          ]}
-                        className="w-full"
-                    >
-                        <CarouselContent>
-                            {partners.map((partner, index) => (
-                                <CarouselItem key={index} className="basis-1/4 sm:basis-1/5 md:basis-1/6 lg:basis-1/8">
-                                    <div className="flex justify-center p-4">
-                                        <Image
-                                            src={partner.logo}
-                                            alt={partner.name}
-                                            width={120}
-                                            height={30}
-                                            className="object-contain"
-                                            data-ai-hint="logo"
-                                        />
-                                    </div>
-                                </CarouselItem>
-                            ))}
-                        </CarouselContent>
-                    </Carousel>
+                <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-x-8 gap-y-4">
+                    {partners.map((partner, index) => (
+                        <div key={index} className="flex justify-center p-4">
+                            <Image
+                                src={partner.logo}
+                                alt={partner.name}
+                                width={120}
+                                height={30}
+                                className="object-contain"
+                                data-ai-hint="logo"
+                            />
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
