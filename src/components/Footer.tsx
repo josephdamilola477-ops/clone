@@ -4,11 +4,11 @@ import { Globe } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-secondary border-t border-border">
+    <footer className="bg-secondary border-t">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
           <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
-             <Link href="/" className="text-2xl font-bold text-primary-foreground bg-primary px-3 py-1 rounded-md hover:opacity-90 transition-opacity">
+             <Link href="/" className="text-2xl font-bold text-foreground">
               PowerHub
             </Link>
             <p className="text-muted-foreground text-sm mt-4">Powering your life, anywhere.</p>
@@ -47,18 +47,13 @@ export function Footer() {
                  <li>
                     <a href="#" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary">Instagram</a>
                  </li>
-                 <li>
-                    <Button variant="link" asChild className="p-0 h-auto text-sm text-muted-foreground">
-                        <Link href="/suggest-styles">AI Style Suggester</Link>
-                    </Button>
-                </li>
             </ul>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-border/50 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
+        <div className="mt-8 pt-8 border-t flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
             <p>&copy; {new Date().getFullYear()} PowerHub. All Rights Reserved.</p>
             <div className="flex items-center gap-4 mt-4 sm:mt-0">
-                <Button variant="ghost" size="sm" className="gap-2 hover:bg-accent">
+                <Button variant="ghost" size="sm" className="gap-2">
                     <Globe size={16} /> English
                 </Button>
             </div>

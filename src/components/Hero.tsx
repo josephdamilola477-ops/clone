@@ -12,17 +12,17 @@ export function Hero() {
         priority
         data-ai-hint="camping power station"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-      <div className="absolute inset-0 flex flex-col items-center justify-end text-center text-white p-8 md:p-12">
-        <div className="mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight max-w-2xl drop-shadow-lg">
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-8 md:p-12">
+        <div className="bg-white/90 backdrop-blur-sm p-8 rounded-lg text-foreground max-w-lg">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight drop-shadow-sm">
             Power Your Life, Anywhere
           </h1>
-          <p className="mt-4 text-lg md:text-xl max-w-xl mx-auto drop-shadow-md">
-            Discover our range of portable power stations and solar solutions.
+          <p className="mt-4 text-lg text-muted-foreground">
+            Explore our portable power stations for life's greatest adventures.
           </p>
-          <Button size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90">
-            Shop Now
+          <Button size="lg" className="mt-8">
+            Shop All Products
           </Button>
         </div>
       </div>

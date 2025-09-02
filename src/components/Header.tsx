@@ -21,18 +21,18 @@ export function Header() {
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      scrolled ? "bg-background/80 backdrop-blur-sm border-b" : "bg-transparent"
+      scrolled ? "bg-background/95 backdrop-blur-sm border-b" : "bg-transparent"
     )}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center gap-8">
-            <Link href="/" className="text-2xl font-bold text-primary-foreground bg-primary px-3 py-1 rounded-md hover:opacity-90 transition-opacity">
+            <Link href="/" className="text-2xl font-bold text-foreground">
               PowerHub
             </Link>
             <nav className="hidden md:flex items-center space-x-8">
-              <Link href="#products" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">Products</Link>
-              <Link href="#solutions" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">Solutions</Link>
-              <Link href="#support" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">Support</Link>
+              <Link href="#products" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Products</Link>
+              <Link href="#solutions" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Solutions</Link>
+              <Link href="#support" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Support</Link>
             </nav>
           </div>
           <div className="hidden md:flex items-center gap-2">
@@ -51,7 +51,7 @@ export function Header() {
               <SheetContent side="left" className="bg-background p-0">
                 <div className="flex flex-col h-full">
                   <div className="flex justify-between items-center p-4 border-b">
-                     <Link href="/" className="text-2xl font-bold text-primary-foreground bg-primary px-3 py-1 rounded-md" onClick={() => setMobileMenuOpen(false)}>
+                     <Link href="/" className="text-2xl font-bold text-foreground" onClick={() => setMobileMenuOpen(false)}>
                         PowerHub
                       </Link>
                     <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
