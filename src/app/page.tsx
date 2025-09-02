@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { ProductHighlight } from "@/components/ProductHighlight";
+import { Aktionsprodukte } from "@/components/Aktionsprodukte";
 import { Partners } from "@/components/Partners";
 import { Footer } from "@/components/Footer";
 import { Features } from "@/components/Features";
@@ -12,8 +12,8 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <Aktionsprodukte />
         <Features />
-        <ProductHighlight />
         <Categories />
         <Partners />
       </main>
