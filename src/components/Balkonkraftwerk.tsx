@@ -3,7 +3,7 @@ import { Button } from './ui/button';
 
 export function Balkonkraftwerk() {
   return (
-    <section className="relative h-[60vh] min-h-[400px] md:h-[500px] w-full flex items-center justify-center text-white">
+    <section className="relative h-[60vh] min-h-[400px] md:h-[500px] w-full flex items-center justify-center text-white my-12">
       <Image
         src="https://picsum.photos/seed/balkon/1800/600"
         alt="EcoFlow Balkonkraftwerk-Sets"
