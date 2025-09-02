@@ -85,8 +85,6 @@ export function Nanoleaf() {
                     </CarouselItem>
                 ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-4 z-20 text-white" />
-            <CarouselNext className="absolute right-4 z-20 text-white" />
         </Carousel>
     </section>
   );
