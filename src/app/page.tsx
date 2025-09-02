@@ -17,11 +17,11 @@ export default function Home() {
         <Hero />
         <Aktionsprodukte />
         <Balkonkraftwerk />
-        <Nanoleaf />
         <Partners />
         <AboutUs />
         <Features />
         <Products />
+        <Nanoleaf />
       </main>
       <Footer />
     </div>
