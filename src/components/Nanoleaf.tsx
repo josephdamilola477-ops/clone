@@ -16,20 +16,6 @@ export function Nanoleaf() {
             <Button size="lg" className="mt-8 bg-gray-900 text-white hover:bg-gray-800 rounded-none h-14 text-base">
               TO THE PRODUCTS
             </Button>
-            <div className="mt-8 space-y-3">
-              <Button className="rounded-full h-12 shadow-lg bg-gray-800 hover:bg-gray-700 text-white pl-4 pr-5">
-                  <div className="relative">
-                      <MessageSquareText size={20} />
-                       <span className="absolute -top-2 -right-2 flex h-4 w-4">
-                          <span className="relative inline-flex rounded-full h-4 w-4 bg-red-500 justify-center items-center text-xs text-white">1</span>
-                      </span>
-                  </div>
-                  <span>Chat</span>
-              </Button>
-              <Button className="rounded-full h-12 px-6 shadow-lg bg-green-600 hover:bg-green-700 text-white font-semibold">
-                  Callback service
-              </Button>
-          </div>
           </div>
           <div>
             <Image
