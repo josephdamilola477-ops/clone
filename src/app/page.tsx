@@ -8,6 +8,7 @@ import { Products } from "@/components/Products";
 import { Balkonkraftwerk } from "@/components/Balkonkraftwerk";
 import { Nanoleaf } from "@/components/Nanoleaf";
 import { AboutUs } from "@/components/AboutUs";
+import { PremiumBrands } from "@/components/PremiumBrands";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <Features />
         <Products />
         <Nanoleaf />
+        <PremiumBrands />
       </main>
       <Footer />
     </div>
