@@ -2,40 +2,61 @@
 import Image from "next/image";
 
 const partners = [
-  { name: 'Amper', logo: 'https://picsum.photos/seed/logo1/150/40?grayscale' },
-  { name: 'Akku...', logo: 'https://picsum.photos/seed/logo2/150/40?grayscale' },
-  { name: 'Hisense', logo: 'https://picsum.photos/seed/logo3/150/40?grayscale' },
-  { name: 'Tibber', logo: 'https://picsum.photos/seed/logo4/150/40?grayscale' },
-  { name: 'Anker', logo: 'https://picsum.photos/seed/logo5/150/40?grayscale' },
-  { name: 'Homey', logo: 'https://picsum.photos/seed/logo6/150/40?grayscale' },
-  { name: 'Synology', logo: 'https://picsum.photos/seed/logo7/150/40?grayscale' },
-  { name: 'Shelly', logo: 'https://picsum.photos/seed/logo8/150/40?grayscale' },
-  { name: 'Tado', logo: 'https://picsum.photos/seed/logo9/150/40?grayscale' },
-  { name: 'EcoFlow', logo: 'https://picsum.photos/seed/logo10/150/40?grayscale' },
-  { name: 'Zendure', logo: 'https://picsum.photos/seed/logo11/150/40?grayscale' },
-  { name: 'Jackery', logo: 'https://picsum.photos/seed/logo12/150/40?grayscale' },
+  { name: 'Anker', logo: 'https://picsum.photos/seed/anker/150/50?grayscale' },
+  { name: 'Dometic', logo: 'https://picsum.photos/seed/dometic/150/50?grayscale' },
+  { name: 'Ecoflow', logo: 'https://picsum.photos/seed/ecoflow-logo/150/50?grayscale' },
+  { name: 'Hisense', logo: 'https://picsum.photos/seed/hisense/150/50?grayscale' },
+  { name: 'Honda', logo: 'https://picsum.photos/seed/honda/150/50?grayscale' },
+  { name: 'Roborock', logo: 'https://picsum.photos/seed/roborock/150/50?grayscale' },
+  { name: 'Sonos', logo: 'https://picsum.photos/seed/sonos/150/50?grayscale' },
+  { name: 'Synology', logo: 'https://picsum.photos/seed/synology/150/50?grayscale' },
+  { name: 'Ugreen', logo: 'https://picsum.photos/seed/ugreen/150/50?grayscale' },
+  { name: 'Zendure', logo: 'https://picsum.photos/seed/zendure/150/50?grayscale' },
 ];
 
 export function Partners() {
     return (
-        <section className="py-20 bg-secondary">
+        <section className="py-24 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-center text-sm font-semibold text-muted-foreground tracking-wider uppercase">
-                    Compatible with your favorite brands
-                </h2>
-                <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-x-8 gap-y-4">
-                    {partners.map((partner, index) => (
-                        <div key={index} className="flex justify-center p-4">
-                            <Image
-                                src={partner.logo}
-                                alt={partner.name}
-                                width={120}
-                                height={30}
-                                className="object-contain"
-                                data-ai-hint="logo"
-                            />
-                        </div>
-                    ))}
+                <div className="text-center">
+                    <h2 className="text-4xl font-bold text-gray-800">MarcMax-Media</h2>
+                    <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+                        Fachhändler für hochwertige Elektronik- & Technik-Produkte - ausgewählt und getestet von Experten.
+                    </p>
+                </div>
+
+                <div className="mt-16 text-center">
+                  <h3 className="text-2xl font-bold text-gray-800">Unsere Marken</h3>
+                  <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-8 items-center">
+                      {partners.slice(0, 7).map((partner) => (
+                          <div key={partner.name} className="flex justify-center p-4 border border-gray-200 rounded-lg">
+                              <Image
+                                  src={partner.logo}
+                                  alt={partner.name}
+                                  width={140}
+                                  height={40}
+                                  className="object-contain"
+                                  data-ai-hint="logo"
+                              />
+                          </div>
+                      ))}
+                  </div>
+                   <div className="mt-8 flex justify-center">
+                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-8 items-center">
+                        {partners.slice(7).map((partner) => (
+                            <div key={partner.name} className="flex justify-center p-4 border border-gray-200 rounded-lg">
+                                <Image
+                                    src={partner.logo}
+                                    alt={partner.name}
+                                    width={140}
+                                    height={40}
+                                    className="object-contain"
+                                    data-ai-hint="logo"
+                                />
+                            </div>
+                        ))}
+                    </div>
+                  </div>
                 </div>
             </div>
         </section>
