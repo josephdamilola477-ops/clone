@@ -4,7 +4,7 @@ import { Aktionsprodukte } from "@/components/Aktionsprodukte";
 import { Partners } from "@/components/Partners";
 import { Footer } from "@/components/Footer";
 import { Features } from "@/components/Features";
-import { Categories } from "@/components/Categories";
+import { Products } from "@/components/Products";
 import { Balkonkraftwerk } from "@/components/Balkonkraftwerk";
 import { Nanoleaf } from "@/components/Nanoleaf";
 import { AboutUs } from "@/components/AboutUs";
@@ -21,7 +21,7 @@ export default function Home() {
         <Partners />
         <AboutUs />
         <Features />
-        <Categories />
+        <Products />
       </main>
       <Footer />
     </div>
