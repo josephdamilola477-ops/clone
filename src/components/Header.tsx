@@ -76,7 +76,7 @@ function Logo() {
 
 function TopBar() {
     return (
-        <div className="bg-gray-900 text-white text-xs py-2">
+        <div className="bg-gray-900 text-white text-xs py-2 hidden md:block">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     <span>Produkte sofort lieferbar</span>
@@ -108,7 +108,7 @@ export function Header() {
     )}>
       <TopBar />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-24 items-center">
+        <div className="flex h-20 md:h-24 items-center">
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2">
               <Logo />
@@ -121,13 +121,13 @@ export function Header() {
             <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">%OUTLET%</Link>
           </nav>
           
-          <div className="flex items-center justify-end gap-2">
+          <div className="hidden md:flex items-center justify-end gap-2">
             <Button variant="ghost" size="icon"><Search size={20}/></Button>
             <Button variant="ghost" size="icon"><User size={20}/></Button>
             <Button variant="ghost" size="icon"><ShoppingCart size={20}/></Button>
           </div>
 
-          <div className="md:hidden">
+          <div className="flex-1 flex justify-end md:hidden">
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -135,7 +135,7 @@ export function Header() {
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="bg-background p-0">
+              <SheetContent side="left" className="bg-background p-0 w-full max-w-sm">
                 <div className="flex flex-col h-full">
                   <div className="flex justify-between items-center p-4 border-b">
                      <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>

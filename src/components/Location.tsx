@@ -2,22 +2,21 @@ import { Button } from './ui/button';
 
 export function Location() {
   return (
-    <section className="relative h-[60vh] min-h-[500px] w-full flex items-center">
+    <section className="relative h-[80vh] md:h-[60vh] min-h-[600px] w-full flex items-center">
       <div className="absolute inset-0">
         <iframe
           width="100%"
           height="100%"
-          frameBorder="0"
-          scrolling="no"
-          marginHeight={0}
-          marginWidth={0}
+          style={{ border: 0 }}
+          loading="lazy"
+          allowFullScreen
           src="https://maps.google.com/maps?q=Stuttgarter%20Str.%2069,%2074321%20Bietigheim-Bissingen&t=&z=15&ie=UTF8&iwloc=&output=embed"
         ></iframe>
       </div>
       <div className="absolute inset-0 bg-black/10" />
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white p-8 max-w-md shadow-2xl">
-          <h2 className="text-2xl font-bold text-gray-800">
+        <div className="bg-white p-6 md:p-8 max-w-md shadow-2xl">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800">
             MarcMax-Media collection warehouse Bietigheim-Bissingen
           </h2>
           <p className="mt-4 text-sm font-semibold tracking-wider uppercase text-muted-foreground">PICKUP</p>

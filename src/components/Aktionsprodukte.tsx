@@ -19,22 +19,22 @@ const products = [
 
 export function Aktionsprodukte() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           <div>
             <Image
               src="https://picsum.photos/seed/ecoflow-home/600/700"
               alt="EcoFlow Delta Pro in a living room"
               width={600}
               height={700}
-              className="rounded-none object-cover"
+              className="rounded-none object-cover w-full h-auto"
               data-ai-hint="power station home"
             />
           </div>
-          <div className="pt-8">
+          <div className="pt-0 md:pt-8">
             <p className="text-xs font-semibold tracking-wider uppercase text-muted-foreground">AKTIONSPRODUKTE</p>
-            <h2 className="text-5xl font-bold mt-2">EcoFlow Delta Pro</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mt-2">EcoFlow Delta Pro</h2>
             <div className="mt-8 space-y-4">
                 {products.map((product, index) => (
                     <div key={product.name}>
