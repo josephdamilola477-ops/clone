@@ -109,25 +109,26 @@ export function Header() {
       <TopBar />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 md:h-24 items-center">
-          <div className="flex items-center">
+          <div className="flex items-center flex-1 md:flex-none">
             <Link href="/" className="flex items-center gap-2">
               <Logo />
             </Link>
           </div>
 
-          <nav className="hidden md:flex flex-1 justify-center items-center space-x-8">
-            <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">ANGEBOT ANFRAGEN</Link>
-            <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">KONTAKT</Link>
-            <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">%OUTLET%</Link>
-          </nav>
-          
-          <div className="hidden md:flex items-center justify-end gap-2">
-            <Button variant="ghost" size="icon"><Search size={20}/></Button>
-            <Button variant="ghost" size="icon"><User size={20}/></Button>
-            <Button variant="ghost" size="icon"><ShoppingCart size={20}/></Button>
+          <div className="hidden md:flex flex-1 justify-end items-center gap-4">
+             <nav className="flex items-center space-x-6">
+                <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">ANGEBOT ANFRAGEN</Link>
+                <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">KONTAKT</Link>
+                <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">%OUTLET%</Link>
+             </nav>
+            <div className="flex items-center gap-2">
+                <Button variant="ghost" size="icon"><Search size={20}/></Button>
+                <Button variant="ghost" size="icon"><User size={20}/></Button>
+                <Button variant="ghost" size="icon"><ShoppingCart size={20}/></Button>
+            </div>
           </div>
-
-          <div className="flex-1 flex justify-end md:hidden">
+          
+          <div className="flex justify-end md:hidden">
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
