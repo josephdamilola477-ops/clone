@@ -167,9 +167,9 @@ export function Products() {
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Shop Our Products</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Kaufen Sie unsere Produkte</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                Find the perfect power solution for your needs.
+                Finden Sie die perfekte Energielösung für Ihre Bedürfnisse.
             </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">

@@ -25,19 +25,19 @@ export function Footer() {
           <div className="md:col-span-1">
             <h3 className="font-semibold mb-4 text-foreground text-sm tracking-widest">SHOP</h3>
             <ul className="space-y-3">
-              <li><Link href="/terms-and-conditions" className="text-sm hover:text-primary">Terms and Conditions</Link></li>
-              <li><Link href="/imprint" className="text-sm hover:text-primary">imprint</Link></li>
-              <li><Link href="/privacy-policy" className="text-sm hover:text-primary">Privacy Policy</Link></li>
-              <li><Link href="/withdrawal" className="text-sm hover:text-primary">Right of withdrawal & withdrawal form</Link></li>
-              <li><Link href="/payment-information" className="text-sm hover:text-primary">Payment information</Link></li>
+              <li><Link href="/terms-and-conditions" className="text-sm hover:text-primary">Allgemeine Geschäftsbedingungen</Link></li>
+              <li><Link href="/imprint" className="text-sm hover:text-primary">Impressum</Link></li>
+              <li><Link href="/privacy-policy" className="text-sm hover:text-primary">Datenschutzerklärung</Link></li>
+              <li><Link href="/withdrawal" className="text-sm hover:text-primary">Widerrufsrecht & Widerrufsformular</Link></li>
+              <li><Link href="/payment-information" className="text-sm hover:text-primary">Zahlungsinformationen</Link></li>
             </ul>
           </div>
           <div className="md:col-span-1">
-            <h3 className="font-semibold mb-4 text-foreground text-sm tracking-widest">SERVICES</h3>
+            <h3 className="font-semibold mb-4 text-foreground text-sm tracking-widest">SERVICE</h3>
             <ul className="space-y-3">
-              <li><Link href="/returns-portal" className="text-sm hover:text-primary">Returns portal</Link></li>
-              <li><Link href="/info-zero-tax" className="text-sm hover:text-primary">Info zero tax rate PV systems</Link></li>
-              <li><Link href="/contact" className="text-sm hover:text-primary">contact</Link></li>
+              <li><Link href="/returns-portal" className="text-sm hover:text-primary">Retourenportal</Link></li>
+              <li><Link href="/info-zero-tax" className="text-sm hover:text-primary">Info Nullsteuersatz PV-Anlagen</Link></li>
+              <li><Link href="/contact" className="text-sm hover:text-primary">Kontakt</Link></li>
             </ul>
           </div>
         </div>
@@ -47,20 +47,20 @@ export function Footer() {
             <div className="flex flex-col md:flex-row items-center gap-x-6 gap-y-4 text-xs text-muted-foreground order-2 md:order-1 mt-8 md:mt-0">
                 <p>&copy; {new Date().getFullYear()} MarcMax Shop.</p>
                 <div className="flex flex-wrap justify-center gap-x-4">
-                    <Link href="/withdrawal" className="hover:text-primary">Right of withdrawal</Link>
-                    <Link href="/privacy-policy" className="hover:text-primary">Privacy Policy</Link>
-                    <Link href="/terms-and-conditions" className="hover:text-primary">Terms and Conditions</Link>
-                    <Link href="#" className="hover:text-primary">Shipment</Link>
-                    <Link href="/contact" className="hover:text-primary">Contact information</Link>
-                    <Link href="/imprint" className="hover:text-primary">imprint</Link>
+                    <Link href="/withdrawal" className="hover:text-primary">Widerrufsrecht</Link>
+                    <Link href="/privacy-policy" className="hover:text-primary">Datenschutzerklärung</Link>
+                    <Link href="/terms-and-conditions" className="hover:text-primary">AGB</Link>
+                    <Link href="#" className="hover:text-primary">Versand</Link>
+                    <Link href="/contact" className="hover:text-primary">Kontaktinformationen</Link>
+                    <Link href="/imprint" className="hover:text-primary">Impressum</Link>
                 </div>
             </div>
             <div className="flex items-center gap-x-4 order-1 md:order-2">
                 <Button variant="ghost" size="sm" className="gap-2 text-xs">
-                    <Globe size={16} /> German <ChevronDown size={16} />
+                    <Globe size={16} /> Deutsch <ChevronDown size={16} />
                 </Button>
                 <Button variant="ghost" size="sm" className="gap-2 text-xs">
-                    Germany (EUR €) <ChevronDown size={16} />
+                    Deutschland (EUR €) <ChevronDown size={16} />
                 </Button>
             </div>
           </div>

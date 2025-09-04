@@ -19,17 +19,17 @@ export function Location() {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white p-6 md:p-8 max-w-md shadow-2xl">
           <h2 className="text-xl md:text-2xl font-bold text-gray-800">
-            MarcMax-Media collection warehouse Bietigheim-Bissingen
+            MarcMax-Media Abhol-Lager Bietigheim-Bissingen
           </h2>
-          <p className="mt-4 text-sm font-semibold tracking-wider uppercase text-muted-foreground">PICKUP</p>
+          <p className="mt-4 text-sm font-semibold tracking-wider uppercase text-muted-foreground">ABHOLUNG</p>
           <div className="mt-6 border-t pt-6">
-            <p className="font-semibold text-gray-800">Theisinger warehouse logistics</p>
+            <p className="font-semibold text-gray-800">Theisinger Lagerlogistik</p>
             <p className="mt-2 text-gray-600">Stuttgarter Str. 69, 74321</p>
             <p className="text-gray-600">Bietigheim-Bissingen</p>
-            <p className="mt-4 text-gray-600">Monday - Friday: 8:00 - 16:00</p>
+            <p className="mt-4 text-gray-600">Montag - Freitag: 8:00 - 16:00</p>
           </div>
           <Button size="lg" className="w-full mt-6 bg-gray-900 text-white hover:bg-gray-800 rounded-none h-14 text-base">
-            CALCULATE ROUTE
+            ROUTE BERECHNEN
           </Button>
         </div>
       </div>

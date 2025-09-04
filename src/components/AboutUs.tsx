@@ -10,7 +10,7 @@ export function AboutUs() {
           <div className="relative min-h-[400px] md:min-h-[500px]">
             <Image
               src="https://picsum.photos/seed/about-us/800/600"
-              alt="Man in a warehouse"
+              alt="Mann in einem Lagerhaus"
               layout="fill"
               objectFit="cover"
               data-ai-hint="warehouse portrait"
