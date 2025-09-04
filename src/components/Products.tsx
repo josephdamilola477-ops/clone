@@ -1,7 +1,9 @@
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from './ui/button';
-import { MessageCircle, Star } from 'lucide-react';
+import { MessageCircle, Star, ShoppingCart } from 'lucide-react';
 
 const products = [
   {
@@ -174,16 +176,31 @@ export function Products() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {products.map((product) => (
-            <Link key={product.name} href={product.href} className="group relative block overflow-hidden">
-              <div className="relative aspect-[1/1] w-full overflow-hidden">
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  fill
-                  className="object-contain transition-transform duration-300 group-hover:scale-105"
-                  data-ai-hint={product.hint}
-                />
-              </div>
+            <div key={product.name} className="group relative block overflow-hidden">
+               <Link href={product.href}>
+                <div className="relative aspect-[1/1] w-full overflow-hidden">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-contain transition-transform duration-300 group-hover:scale-105"
+                    data-ai-hint={product.hint}
+                  />
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <Button 
+                      size="lg" 
+                      className="bg-white text-black hover:bg-white/90"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        console.log(`${product.name} added to cart`);
+                      }}
+                    >
+                      <ShoppingCart className="mr-2 h-5 w-5" />
+                      In den Warenkorb
+                    </Button>
+                  </div>
+                </div>
+              </Link>
               <div className="p-4 bg-card text-left">
                 <div className="flex items-center justify-between">
                     <p className="text-xs text-muted-foreground">{product.brand}</p>
@@ -192,7 +209,11 @@ export function Products() {
                         <span className="h-3 w-3 rounded-full bg-gray-200 border-2 border-white ring-1 ring-gray-400"></span>
                     </div>
                 </div>
-                <h3 className="mt-2 text-sm font-medium text-foreground h-10">{product.name}</h3>
+                <h3 className="mt-2 text-sm font-medium text-foreground h-10">
+                  <Link href={product.href}>
+                    {product.name}
+                  </Link>
+                </h3>
                 
                 <div className="mt-2">
                     <StarRating rating={product.rating} reviews={product.reviews} />
@@ -205,7 +226,7 @@ export function Products() {
 
                 <p className="mt-3 font-semibold text-foreground text-base">€{product.price.replace(' - ', ' - €')}</p>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
