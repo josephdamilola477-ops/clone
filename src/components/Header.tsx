@@ -7,6 +7,7 @@ import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { CartContext } from '@/context/CartContext';
 import { Badge } from '@/components/ui/badge';
+import { CartDrawer } from './CartDrawer';
 
 function Logo() {
     return (
@@ -95,6 +96,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { cart } = useContext(CartContext);
+  const cartItemCount = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -109,77 +111,82 @@ export function Header() {
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
       scrolled ? "bg-background/95 backdrop-blur-sm border-b" : "bg-transparent"
     )}>
-      <TopBar />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 md:h-24 items-center">
-          <div className="flex items-center flex-1 md:flex-none">
-            <Link href="/" className="flex items-center gap-2">
-              <Logo />
-            </Link>
-          </div>
-
-          <div className="hidden md:flex flex-1 justify-end items-center gap-4">
-             <nav className="flex items-center space-x-6">
-                <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">ANGEBOT ANFRAGEN</Link>
-                <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">KONTAKT</Link>
-                <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">%OUTLET%</Link>
-             </nav>
-            <div className="flex items-center gap-2">
-                <Button variant="ghost" size="icon"><Search size={20}/></Button>
-                <Button variant="ghost" size="icon"><User size={20}/></Button>
-                <Button variant="ghost" size="icon" className="relative">
-                  <Link href="/cart">
-                    <ShoppingCart size={20}/>
-                    {cart.length > 0 && (
-                      <Badge variant="destructive" className="absolute -right-2 -top-2 h-5 w-5 justify-center p-0">{cart.length}</Badge>
-                    )}
-                  </Link>
-                </Button>
+       <Sheet>
+        <TopBar />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex h-20 md:h-24 items-center">
+            <div className="flex items-center flex-1 md:flex-none">
+                <Link href="/" className="flex items-center gap-2">
+                <Logo />
+                </Link>
             </div>
-          </div>
-          
-          <div className="flex justify-end md:hidden">
-            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu size={24} />
-                  <span className="sr-only">Open menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left" className="bg-background p-0 w-full max-w-sm">
-                <div className="flex flex-col h-full">
-                  <div className="flex justify-between items-center p-4 border-b">
-                     <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-                        <Logo />
-                      </Link>
-                    <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
-                      <X size={24} />
-                       <span className="sr-only">Close menu</span>
-                    </Button>
-                  </div>
-                  <nav className="flex-1 flex flex-col gap-4 p-4">
-                    <Link href="/contact" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>ANGEBOT ANFRAGEN</Link>
-                    <Link href="/contact" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>KONTAKT</Link>
-                    <Link href="#" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>%OUTLET%</Link>
-                  </nav>
-                  <div className="p-4 border-t flex justify-around">
-                     <Button variant="ghost" size="icon"><Search size={24}/></Button>
-                     <Button variant="ghost" size="icon"><User size={24}/></Button>
-                     <Button variant="ghost" size="icon" className="relative">
-                        <Link href="/cart">
-                          <ShoppingCart size={24}/>
-                          {cart.length > 0 && (
-                            <Badge variant="destructive" className="absolute -right-2 -top-2 h-5 w-5 justify-center p-0">{cart.length}</Badge>
-                          )}
-                        </Link>
-                     </Button>
-                  </div>
+
+            <div className="hidden md:flex flex-1 justify-end items-center gap-4">
+                <nav className="flex items-center space-x-6">
+                    <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">ANGEBOT ANFRAGEN</Link>
+                    <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">KONTAKT</Link>
+                    <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">%OUTLET%</Link>
+                </nav>
+                <div className="flex items-center gap-2">
+                    <Button variant="ghost" size="icon"><Search size={20}/></Button>
+                    <Button variant="ghost" size="icon"><User size={20}/></Button>
+                    <SheetTrigger asChild>
+                      <Button variant="ghost" size="icon" className="relative">
+                        <ShoppingCart size={20}/>
+                        {cartItemCount > 0 && (
+                          <Badge variant="destructive" className="absolute -right-2 -top-2 h-5 w-5 justify-center p-0">{cartItemCount}</Badge>
+                        )}
+                      </Button>
+                    </SheetTrigger>
                 </div>
-              </SheetContent>
-            </Sheet>
-          </div>
+            </div>
+            
+            <div className="flex justify-end md:hidden">
+                <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+                <SheetTrigger asChild>
+                    <Button variant="ghost" size="icon">
+                    <Menu size={24} />
+                    <span className="sr-only">Open menu</span>
+                    </Button>
+                </SheetTrigger>
+                <SheetContent side="left" className="bg-background p-0 w-full max-w-sm">
+                    <div className="flex flex-col h-full">
+                    <div className="flex justify-between items-center p-4 border-b">
+                        <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
+                            <Logo />
+                        </Link>
+                        <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
+                        <X size={24} />
+                        <span className="sr-only">Close menu</span>
+                        </Button>
+                    </div>
+                    <nav className="flex-1 flex flex-col gap-4 p-4">
+                        <Link href="/contact" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>ANGEBOT ANFRAGEN</Link>
+                        <Link href="/contact" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>KONTAKT</Link>
+                        <Link href="#" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>%OUTLET%</Link>
+                    </nav>
+                    <div className="p-4 border-t flex justify-around">
+                        <Button variant="ghost" size="icon"><Search size={24}/></Button>
+                        <Button variant="ghost" size="icon"><User size={24}/></Button>
+                         <SheetTrigger asChild>
+                          <Button variant="ghost" size="icon" className="relative" onClick={() => setMobileMenuOpen(false)}>
+                              <ShoppingCart size={24}/>
+                              {cartItemCount > 0 && (
+                              <Badge variant="destructive" className="absolute -right-2 -top-2 h-5 w-5 justify-center p-0">{cartItemCount}</Badge>
+                              )}
+                          </Button>
+                        </SheetTrigger>
+                    </div>
+                    </div>
+                </SheetContent>
+                </Sheet>
+            </div>
+            </div>
         </div>
-      </div>
+        <SheetContent className="p-0 w-full max-w-md">
+            <CartDrawer />
+        </SheetContent>
+      </Sheet>
     </header>
   );
 }
