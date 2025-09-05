@@ -5,9 +5,12 @@ import Link from 'next/link';
 import { Button } from './ui/button';
 import { MessageCircle, Star, ShoppingCart } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { useContext } from 'react';
+import { CartContext, Product } from '@/context/CartContext';
 
-const products = [
+const products: Product[] = [
   {
+    id: '1',
     brand: 'SANUS',
     name: 'SANUS ERA 300 Standfuß',
     image: 'https://picsum.photos/seed/s1/400/400',
@@ -19,6 +22,7 @@ const products = [
     hint: 'speaker stand',
   },
   {
+    id: '2',
     brand: 'FLEXSON',
     name: 'Flexson One/One SL/Play 1 Standfuß',
     image: 'https://picsum.photos/seed/s2/400/400',
@@ -30,6 +34,7 @@ const products = [
     hint: 'speaker stand white',
   },
   {
+    id: '3',
     brand: 'SANUS',
     name: 'SANUS ERA 100 höhenverstellbarer Standfuß',
     image: 'https://picsum.photos/seed/s3/400/400',
@@ -41,6 +46,7 @@ const products = [
     hint: 'speaker stand black',
   },
   {
+    id: '4',
     brand: 'SANUS',
     name: 'SANUS ERA 300 höhenverstellbarer Standfuß',
     image: 'https://picsum.photos/seed/s4/400/400',
@@ -52,6 +58,7 @@ const products = [
     hint: 'speaker stand black',
   },
   {
+    id: '5',
     brand: 'EcoFlow',
     name: 'EcoFlow DELTA 2',
     image: 'https://picsum.photos/seed/p1/400/400',
@@ -63,6 +70,7 @@ const products = [
     hint: 'portable power',
   },
   {
+    id: '6',
     brand: 'EcoFlow',
     name: 'EcoFlow RIVER 2 Pro',
     image: 'https://picsum.photos/seed/p2/400/400',
@@ -74,6 +82,7 @@ const products = [
     hint: 'portable power',
   },
     {
+    id: '7',
     brand: 'Anker',
     name: 'Anker 757 PowerHouse',
     image: 'https://picsum.photos/seed/p3/400/400',
@@ -85,6 +94,7 @@ const products = [
     hint: 'portable power',
   },
   {
+    id: '8',
     brand: 'BLUETTI',
     name: 'BLUETTI AC200MAX',
     image: 'https://picsum.photos/seed/p4/400/400',
@@ -96,6 +106,7 @@ const products = [
     hint: 'portable power',
   },
   {
+    id: '9',
     brand: 'EcoFlow',
     name: 'EcoFlow 400W Solar Panel',
     image: 'https://picsum.photos/seed/p5/400/400',
@@ -107,6 +118,7 @@ const products = [
     hint: 'solar panel',
   },
   {
+    id: '10',
     brand: 'Jackery',
     name: 'Jackery SolarSaga 100W',
     image: 'https://picsum.photos/seed/p6/400/400',
@@ -118,6 +130,7 @@ const products = [
     hint: 'solar panel',
   },
   {
+    id: '11',
     brand: 'Zendure',
     name: 'Zendure SuperBase Pro 2000',
     image: 'https://picsum.photos/seed/p7/400/400',
@@ -129,6 +142,7 @@ const products = [
     hint: 'home battery',
   },
   {
+    id: '12',
     brand: 'EcoFlow',
     name: 'EcoFlow Smart Home Panel',
     image: 'https://picsum.photos/seed/p8/400/400',
@@ -167,6 +181,16 @@ const StarRating = ({ rating, reviews }: { rating: number; reviews: number }) =>
 
 export function Products() {
   const { toast } = useToast();
+  const { addToCart } = useContext(CartContext);
+
+  const handleAddToCart = (e: React.MouseEvent, product: Product) => {
+    e.preventDefault();
+    addToCart(product);
+    toast({
+      title: "Produkt hinzugefügt",
+      description: `${product.name} wurde Ihrem Warenkorb hinzugefügt.`,
+    });
+  }
 
   return (
     <section className="py-24 bg-background">
@@ -179,7 +203,7 @@ export function Products() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {products.map((product) => (
-            <div key={product.name} className="group relative block overflow-hidden">
+            <div key={product.id} className="group relative block overflow-hidden">
                <Link href={product.href}>
                 <div className="relative aspect-[1/1] w-full overflow-hidden">
                   <Image
@@ -193,13 +217,7 @@ export function Products() {
                     <Button 
                       size="lg" 
                       className="bg-white text-black hover:bg-white/90"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        toast({
-                          title: "Produkt hinzugefügt",
-                          description: `${product.name} wurde Ihrem Warenkorb hinzugefügt.`,
-                        });
-                      }}
+                      onClick={(e) => handleAddToCart(e, product)}
                     >
                       <ShoppingCart className="mr-2 h-5 w-5" />
                       In den Warenkorb

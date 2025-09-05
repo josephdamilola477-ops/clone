@@ -1,10 +1,12 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { ShoppingCart, User, Menu, X, Search } from 'lucide-react';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+import { CartContext } from '@/context/CartContext';
+import { Badge } from '@/components/ui/badge';
 
 function Logo() {
     return (
@@ -92,6 +94,7 @@ function TopBar() {
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { cart } = useContext(CartContext);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -124,7 +127,14 @@ export function Header() {
             <div className="flex items-center gap-2">
                 <Button variant="ghost" size="icon"><Search size={20}/></Button>
                 <Button variant="ghost" size="icon"><User size={20}/></Button>
-                <Button variant="ghost" size="icon"><ShoppingCart size={20}/></Button>
+                <Button variant="ghost" size="icon" className="relative">
+                  <Link href="/cart">
+                    <ShoppingCart size={20}/>
+                    {cart.length > 0 && (
+                      <Badge variant="destructive" className="absolute -right-2 -top-2 h-5 w-5 justify-center p-0">{cart.length}</Badge>
+                    )}
+                  </Link>
+                </Button>
             </div>
           </div>
           
@@ -155,7 +165,14 @@ export function Header() {
                   <div className="p-4 border-t flex justify-around">
                      <Button variant="ghost" size="icon"><Search size={24}/></Button>
                      <Button variant="ghost" size="icon"><User size={24}/></Button>
-                     <Button variant="ghost" size="icon"><ShoppingCart size={24}/></Button>
+                     <Button variant="ghost" size="icon" className="relative">
+                        <Link href="/cart">
+                          <ShoppingCart size={24}/>
+                          {cart.length > 0 && (
+                            <Badge variant="destructive" className="absolute -right-2 -top-2 h-5 w-5 justify-center p-0">{cart.length}</Badge>
+                          )}
+                        </Link>
+                     </Button>
                   </div>
                 </div>
               </SheetContent>
