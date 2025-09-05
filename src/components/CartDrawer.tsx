@@ -11,15 +11,21 @@ import { SheetHeader, SheetTitle, SheetFooter, SheetClose } from '@/components/u
 import { Trash2, X } from 'lucide-react';
 import { ScrollArea } from './ui/scroll-area';
 
+const formatPrice = (price: number) => {
+  return new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(price);
+};
+
+const parsePrice = (priceString: string): number => {
+    const cleanedString = priceString.replace('€', '').replace(/\./g, '').replace(',', '.').trim();
+    const price = parseFloat(cleanedString.split(' - ')[0]);
+    return isNaN(price) ? 0 : price;
+}
+
 export function CartDrawer() {
   const { cart, removeFromCart, updateQuantity, clearCart } = useContext(CartContext);
 
   const subtotal = cart.reduce((acc, item) => {
-    const priceString = item.price.replace(',', '.').split(' - ')[0];
-    const price = parseFloat(priceString);
-    if (isNaN(price)) {
-      return acc;
-    }
+    const price = parsePrice(item.price);
     return acc + price * (item.quantity || 1);
   }, 0);
 
@@ -61,7 +67,7 @@ export function CartDrawer() {
                     </div>
                   </div>
                    <div className="text-right">
-                        <p className="font-semibold">€{(parseFloat(item.price.replace(',', '.').split(' - ')[0]) * (item.quantity || 1)).toFixed(2)}</p>
+                        <p className="font-semibold">{formatPrice(parsePrice(item.price) * (item.quantity || 1))}</p>
                         <Button variant="ghost" size="icon" className="h-8 w-8 mt-1" onClick={() => removeFromCart(item.id)}>
                             <Trash2 className="h-4 w-4" />
                         </Button>
@@ -74,7 +80,7 @@ export function CartDrawer() {
              <div className="w-full space-y-4">
                 <div className="flex justify-between font-bold text-lg">
                     <span>Gesamtsumme</span>
-                    <span>€{subtotal.toFixed(2)}</span>
+                    <span>{formatPrice(subtotal)}</span>
                 </div>
                 <Button size="lg" className="w-full">Zur Kasse gehen</Button>
                 <Button variant="outline" className="w-full" onClick={clearCart}>Warenkorb leeren</Button>
