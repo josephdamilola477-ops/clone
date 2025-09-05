@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { MessageCircle, Star, ShoppingCart } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 const products = [
   {
@@ -165,6 +166,8 @@ const StarRating = ({ rating, reviews }: { rating: number; reviews: number }) =>
 
 
 export function Products() {
+  const { toast } = useToast();
+
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -192,7 +195,10 @@ export function Products() {
                       className="bg-white text-black hover:bg-white/90"
                       onClick={(e) => {
                         e.preventDefault();
-                        console.log(`${product.name} added to cart`);
+                        toast({
+                          title: "Produkt hinzugefügt",
+                          description: `${product.name} wurde Ihrem Warenkorb hinzugefügt.`,
+                        });
                       }}
                     >
                       <ShoppingCart className="mr-2 h-5 w-5" />
