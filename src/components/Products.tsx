@@ -195,7 +195,7 @@ export function Products() {
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold">Kaufen Sie unsere Produkte</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
                 Finden Sie die perfekte Energielösung für Ihre Bedürfnisse.
@@ -203,7 +203,7 @@ export function Products() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {products.map((product) => (
-            <div key={product.id} className="group relative block overflow-hidden">
+            <div key={product.id} className="group relative block overflow-hidden animate-fade-in">
                <Link href={product.href}>
                 <div className="relative aspect-[1/1] w-full overflow-hidden">
                   <Image

@@ -23,8 +23,8 @@ export function Features() {
     <section className="bg-secondary/50 py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          {features.map((feature) => (
-            <div key={feature.title} className="flex flex-col items-center">
+          {features.map((feature, index) => (
+            <div key={feature.title} className="flex flex-col items-center animate-fade-in" style={{ animationDelay: `${index * 150}ms` }}>
               {feature.icon}
               <h3 className="mt-4 text-lg font-semibold">{feature.title}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{feature.description}</p>
