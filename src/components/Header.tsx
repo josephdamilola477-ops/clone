@@ -123,6 +123,7 @@ export function Header() {
 
             <div className="hidden md:flex flex-1 justify-end items-center gap-4">
                 <nav className="flex items-center space-x-6">
+                    <Link href="/products" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">PRODUCTS</Link>
                     <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">REQUEST A QUOTE</Link>
                     <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">CONTACT</Link>
                     <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">%OUTLET%</Link>
@@ -161,6 +162,7 @@ export function Header() {
                         </Button>
                     </div>
                     <nav className="flex-1 flex flex-col gap-4 p-4">
+                        <Link href="/products" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>PRODUCTS</Link>
                         <Link href="/contact" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>REQUEST A QUOTE</Link>
                         <Link href="/contact" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>CONTACT</Link>
                         <Link href="#" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>%OUTLET%</Link>
