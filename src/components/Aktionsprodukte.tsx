@@ -5,14 +5,14 @@ import { Separator } from './ui/separator';
 
 const products = [
     {
-        name: 'EcoFlow DELTA Pro Extra Battery Zusatzakku 3600 Wh',
-        price: '1.249,00',
-        originalPrice: '1.579,00',
+        name: 'EcoFlow DELTA Pro Extra Battery 3600 Wh',
+        price: '1,249.00',
+        originalPrice: '1,579.00',
         image: 'https://picsum.photos/seed/prod1/80/80'
     },
     {
         name: 'EcoFlow Delta Pro PowerStation',
-        price: '1.379,00',
+        price: '1,379.00',
         image: 'https://picsum.photos/seed/prod2/80/80'
     }
 ]
@@ -33,7 +33,7 @@ export function Aktionsprodukte() {
             />
           </div>
           <div className="pt-0 md:pt-8">
-            <p className="text-xs font-semibold tracking-wider uppercase text-muted-foreground">AKTIONSPRODUKTE</p>
+            <p className="text-xs font-semibold tracking-wider uppercase text-muted-foreground">PROMOTIONAL PRODUCTS</p>
             <h2 className="text-3xl md:text-5xl font-bold mt-2">EcoFlow Delta Pro</h2>
             <div className="mt-8 space-y-4">
                 {products.map((product, index) => (
@@ -48,14 +48,14 @@ export function Aktionsprodukte() {
                                             <SelectValue />
                                         </SelectTrigger>
                                         <SelectContent>
-                                            <SelectItem value="0">0% Mwst. (Angebot gemäß § 12 Abs. 3 UstG)</SelectItem>
+                                            <SelectItem value="0">0% VAT (Offer according to § 12 Abs. 3 UstG)</SelectItem>
                                         </SelectContent>
                                      </Select>
                                 </div>
                             </div>
                              <div className="text-right">
-                                {product.originalPrice && <p className="text-sm text-muted-foreground line-through">€{product.originalPrice}</p>}
-                                <p className="font-bold text-red-500 text-lg">€{product.price}</p>
+                                {product.originalPrice && <p className="text-sm text-muted-foreground line-through">${product.originalPrice}</p>}
+                                <p className="font-bold text-red-500 text-lg">${product.price}</p>
                             </div>
                         </div>
                         {index < products.length - 1 && <Separator className="mt-4" />}
@@ -63,7 +63,7 @@ export function Aktionsprodukte() {
                 ))}
             </div>
             <Button size="lg" className="w-full mt-8 bg-gray-900 text-white hover:bg-gray-800 rounded-none h-14 text-base">
-                SET ZUM WARENKORB HINZUFÜGEN
+                ADD SET TO CART
             </Button>
           </div>
         </div>

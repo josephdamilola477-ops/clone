@@ -73,10 +73,10 @@ export default function AdminLayout({
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive={pathname.startsWith("/admin/products")} tooltip="Produkte">
+                <SidebarMenuButton asChild isActive={pathname.startsWith("/admin/products")} tooltip="Products">
                   <Link href="/admin/products">
                     <ShoppingBag />
-                    <span>Produkte</span>
+                    <span>Products</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -94,14 +94,14 @@ export default function AdminLayout({
                   <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                   <Input
                     type="search"
-                    placeholder="Suchen..."
+                    placeholder="Search..."
                     className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px] bg-muted/40"
                   />
                 </div>
               </form>
               <Button variant="ghost" size="icon" className="rounded-full">
                 <User className="h-5 w-5" />
-                <span className="sr-only">Benutzerprofil</span>
+                <span className="sr-only">User Profile</span>
               </Button>
             </div>
           </header>

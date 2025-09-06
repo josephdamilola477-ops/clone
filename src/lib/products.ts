@@ -20,7 +20,7 @@ export const products: Product[] = [
   {
     id: '1',
     brand: 'SANUS',
-    name: 'SANUS ERA 300 Standfuß',
+    name: 'SANUS ERA 300 Stand',
     image: 'https://picsum.photos/seed/s1/800/800',
     rating: 5,
     reviews: 2,
@@ -28,24 +28,24 @@ export const products: Product[] = [
     price: '199.99',
     href: '/products/1',
     hint: 'speaker stand',
-    description: "Der SANUS WSS22 Standfuß wurde entwickelt, um den Sonos Era 300™ kabellosen Lautsprecher in der optimalen Hörhöhe zu platzieren und gleichzeitig perfekt in jede Wohnkultur zu passen. Hergestellt aus hochwertigem Stahl, bietet der WSS22 eine außergewöhnliche Stabilität und Langlebigkeit.",
+    description: "The SANUS WSS22 stand is designed to place the Sonos Era 300™ wireless speaker at the optimal listening height while perfectly matching any home decor. Made from high-quality steel, the WSS22 offers exceptional stability and durability.",
     features: [
-        "Platziert den Lautsprecher in der optimalen Hörhöhe",
-        "Kabelmanagement für einen sauberen Look",
-        "Einfache Montage in 15 Minuten",
-        "Inklusive Gummifüße und höhenverstellbare Spikes für verschiedene Böden"
+        "Places the speaker at the optimal listening height",
+        "Cable management for a clean look",
+        "Easy assembly in 15 minutes",
+        "Includes rubber feet and height-adjustable spikes for different floors"
     ],
     specs: {
-        "Kompatibilität": "Sonos Era 300",
-        "Material": "Stahl und Aluminium",
-        "Höhe": "83.82 cm",
-        "Gewicht": "3.4 kg"
+        "Compatibility": "Sonos Era 300",
+        "Material": "Steel and Aluminum",
+        "Height": "83.82 cm",
+        "Weight": "3.4 kg"
     }
   },
   {
     id: '2',
     brand: 'FLEXSON',
-    name: 'Flexson One/One SL/Play 1 Standfuß',
+    name: 'Flexson One/One SL/Play 1 Stand',
     image: 'https://picsum.photos/seed/s2/800/800',
     rating: 0,
     reviews: 0,
@@ -53,23 +53,23 @@ export const products: Product[] = [
     price: '39.00 - 79.00',
     href: '/products/2',
     hint: 'speaker stand white',
-    description: "Stellen Sie Ihre Sonos One, One SL oder Play:1 Lautsprecher mit diesem maßgeschneiderten Standfuß von Flexson in der idealen Höhe auf. Perfekt für Stereo-Paare oder als hintere Lautsprecher in einem Surround-Sound-Setup.",
+    description: "Place your Sonos One, One SL, or Play:1 speakers at the ideal height with this custom-designed stand from Flexson. Perfect for stereo pairs or as rear speakers in a surround sound setup.",
     features: [
-        "Maßgeschneidertes Design für Sonos One, One SL und Play:1",
-        "Positioniert den Lautsprecher in idealer Hörhöhe",
-        "Clevere Kabelführung",
-        "Erhältlich in Schwarz und Weiß, passend zum Lautsprecher"
+        "Custom design for Sonos One, One SL, and Play:1",
+        "Positions the speaker at the ideal listening height",
+        "Clever cable management",
+        "Available in black and white to match the speaker"
     ],
     specs: {
-        "Kompatibilität": "Sonos One, One SL, Play:1",
-        "Material": "Stahl",
-        "Höhe": "71.4 cm"
+        "Compatibility": "Sonos One, One SL, Play:1",
+        "Material": "Steel",
+        "Height": "71.4 cm"
     }
   },
   {
     id: '3',
     brand: 'SANUS',
-    name: 'SANUS ERA 100 höhenverstellbarer Standfuß',
+    name: 'SANUS ERA 100 Height-Adjustable Stand',
     image: 'https://picsum.photos/seed/s3/800/800',
     rating: 0,
     reviews: 0,
@@ -77,23 +77,23 @@ export const products: Product[] = [
     price: '124.99 - 214.99',
     href: '/products/3',
     hint: 'speaker stand black',
-    description: "Der höhenverstellbare Standfuß für den Sonos Era 100 bietet eine optimale Audioleistung. Er ist aus strapazierfähigem Stahl und Aluminium gefertigt und hält Ihren Lautsprecher sicher an Ort und Stelle.",
+    description: "The height-adjustable stand for the Sonos Era 100 provides optimal audio performance. It is made of durable steel and aluminum and securely holds your speaker in place.",
     features: [
-        "Höhenverstellbar von 63cm bis 106cm",
-        "Press-Fit-Kabelmanagement für einen sauberen Look",
-        "Einfache Montage",
-        "Inklusive Spikes und Gummipads für Teppich- und Hartböden"
+        "Height adjustable from 63cm to 106cm",
+        "Press-fit cable management for a clean look",
+        "Easy assembly",
+        "Includes spikes and rubber pads for carpet and hard floors"
     ],
     specs: {
-        "Kompatibilität": "Sonos Era 100",
-        "Material": "Stahl und Aluminium",
-        "Höhenverstellbarkeit": "63cm - 106cm"
+        "Compatibility": "Sonos Era 100",
+        "Material": "Steel and Aluminum",
+        "Height Adjustability": "63cm - 106cm"
     }
   },
   {
     id: '4',
     brand: 'SANUS',
-    name: 'SANUS ERA 300 höhenverstellbarer Standfuß',
+    name: 'SANUS ERA 300 Height-Adjustable Stand',
     image: 'https://picsum.photos/seed/s4/800/800',
     rating: 0,
     reviews: 0,
@@ -101,17 +101,17 @@ export const products: Product[] = [
     price: '169.99 - 279.99',
     href: '/products/4',
     hint: 'speaker stand black',
-    description: "Maximieren Sie Ihr Hörerlebnis mit dem höhenverstellbaren Standfuß für den Sonos Era 300. Dieser Standfuß bietet eine optimale Platzierung und ein schlankes, unauffälliges Design.",
+    description: "Maximize your listening experience with the height-adjustable stand for the Sonos Era 300. This stand offers optimal placement and a slim, unobtrusive design.",
      features: [
-        "Höhenverstellbar für optimale Positionierung",
-        "Integriertes Kabelmanagement",
-        "Stabile und sichere Konstruktion",
-        "Entwickelt, um sich nahtlos in Ihr Zuhause einzufügen"
+        "Height adjustable for optimal positioning",
+        "Integrated cable management",
+        "Stable and secure construction",
+        "Designed to blend seamlessly into your home"
     ],
     specs: {
-        "Kompatibilität": "Sonos Era 300",
-        "Material": "Stahl und Aluminium",
-        "Höhenverstellbarkeit": "83cm - 117cm"
+        "Compatibility": "Sonos Era 300",
+        "Material": "Steel and Aluminum",
+        "Height Adjustability": "83cm - 117cm"
     }
   },
   {
@@ -122,21 +122,21 @@ export const products: Product[] = [
     rating: 4.5,
     reviews: 120,
     questions: 5,
-    price: '999,00',
+    price: '999.00',
     href: '/products/5',
     hint: 'portable power',
-    description: "Die EcoFlow DELTA 2 ist eine unverzichtbare Powerstation für jeden Haushalt, die Ihnen in jeder Situation, in der Sie Strom benötigen, Sicherheit bietet. Sie ist schnell aufladbar, langlebig und ideal für den Heimgebrauch und unterwegs.",
+    description: "The EcoFlow DELTA 2 is an essential power station for any household, providing you with security in any situation where you need power. It is fast-charging, durable, and ideal for home and on-the-go use.",
     features: [
-        "1024Wh Kapazität",
-        "1800W AC-Ausgang (2700W Surge)",
-        "In 50 Minuten von 0-80% aufgeladen",
-        "Langlebige LFP-Batterie mit 3000+ Zyklen"
+        "1024Wh capacity",
+        "1800W AC output (2700W Surge)",
+        "Charged from 0-80% in 50 minutes",
+        "Durable LFP battery with 3000+ cycles"
     ],
     specs: {
-        "Kapazität": "1024Wh",
-        "AC-Ausgang": "1800W",
-        "Anschlüsse": "15 Ausgänge",
-        "Gewicht": "12 kg"
+        "Capacity": "1024Wh",
+        "AC Output": "1800W",
+        "Ports": "15 outputs",
+        "Weight": "12 kg"
     }
   },
   {
@@ -147,21 +147,21 @@ export const products: Product[] = [
     rating: 4.8,
     reviews: 98,
     questions: 3,
-    price: '769,00',
+    price: '769.00',
     href: '/products/6',
     hint: 'portable power',
-    description: "Die RIVER 2 Pro ist mit ihrer branchenführenden Ladegeschwindigkeit die ultimative tragbare Powerstation für Ihre Off-Grid-Abenteuer. Mit 768Wh Kapazität und 800W Leistung können Sie mehrere Geräte gleichzeitig mit Strom versorgen.",
+    description: "With its industry-leading charging speed, the RIVER 2 Pro is the ultimate portable power station for your off-grid adventures. With 768Wh capacity and 800W power, you can power multiple devices simultaneously.",
     features: [
-        "In 70 Minuten vollständig aufgeladen",
-        "768Wh Kapazität",
-        "800W Leistung",
-        "LFP-Batterie für bis zu 10 Jahre Nutzung"
+        "Fully charged in 70 minutes",
+        "768Wh capacity",
+        "800W power",
+        "LFP battery for up to 10 years of use"
     ],
     specs: {
-        "Kapazität": "768Wh",
-        "AC-Ausgang": "800W",
-        "Anschlüsse": "11 Ausgänge",
-        "Gewicht": "7.8 kg"
+        "Capacity": "768Wh",
+        "AC Output": "800W",
+        "Ports": "11 outputs",
+        "Weight": "7.8 kg"
     }
   },
     {
@@ -172,21 +172,21 @@ export const products: Product[] = [
     rating: 4.7,
     reviews: 250,
     questions: 12,
-    price: '1.399,00',
+    price: '1,399.00',
     href: '/products/7',
     hint: 'portable power',
-    description: "Ausgestattet mit einer langlebigen LiFePO4-Batterie, die 3.000 Ladezyklen übersteht, versorgt die Anker 757 PowerHouse Ihre Geräte jeden Tag für 10 Jahre. Ein Sturz-sicheres Unibody-Design und branchenführende Komponenten gewährleisten eine lange Lebensdauer.",
+    description: "Equipped with a durable LiFePO4 battery that lasts for 3,000 charging cycles, the Anker 757 PowerHouse powers your devices every day for 10 years. A drop-proof unibody design and industry-leading components ensure a long lifespan.",
     features: [
-        "1229Wh Kapazität, 1500W Leistung",
-        "Extrem langlebige LiFePO4-Batterien",
-        "HyperFlash™-Technologie lädt in 1 Stunde auf 80%",
-        "Integrierte Lichtleiste für Umgebungslicht"
+        "1229Wh capacity, 1500W power",
+        "Extremely durable LiFePO4 batteries",
+        "HyperFlash™ technology charges to 80% in 1 hour",
+        "Integrated light bar for ambient light"
     ],
     specs: {
-        "Kapazität": "1229Wh",
-        "AC-Ausgang": "1500W",
-        "Anschlüsse": "9 Ausgänge",
-        "Gewicht": "19.9 kg"
+        "Capacity": "1229Wh",
+        "AC Output": "1500W",
+        "Ports": "9 outputs",
+        "Weight": "19.9 kg"
     }
   },
   {
@@ -197,21 +197,21 @@ export const products: Product[] = [
     rating: 4.6,
     reviews: 180,
     questions: 8,
-    price: '1.899,00',
+    price: '1,899.00',
     href: '/products/8',
     hint: 'portable power',
-    description: "Der erste modulare, erweiterbare BLUETTI Power-Station. Mit erstaunlichen 2048Wh ultra-haltbaren LFP-Zellen und einem 2.200W Full-Power-Wechselrichter mit reiner Sinuswelle ist der AC200MAX ein Kraftpaket für unterwegs.",
+    description: "The first modular, expandable BLUETTI power station. With an amazing 2048Wh of ultra-durable LFP cells and a 2,200W full-power pure sine wave inverter, the AC200MAX is a powerhouse on the go.",
     features: [
-        "2048Wh Kapazität, erweiterbar auf bis zu 8192Wh",
-        "2200W AC-Wechselrichter",
-        "3500+ Lebenszyklen bis 80% Kapazität",
-        "16 Ausgänge für verschiedene Geräte"
+        "2048Wh capacity, expandable up to 8192Wh",
+        "2200W AC inverter",
+        "3500+ life cycles to 80% capacity",
+        "16 outputs for various devices"
     ],
      specs: {
-        "Kapazität": "2048Wh",
-        "AC-Ausgang": "2200W",
-        "Anschlüsse": "16 Ausgänge",
-        "Gewicht": "28.1 kg"
+        "Capacity": "2048Wh",
+        "AC Output": "2200W",
+        "Ports": "16 outputs",
+        "Weight": "28.1 kg"
     }
   },
   {
@@ -222,21 +222,21 @@ export const products: Product[] = [
     rating: 4.9,
     reviews: 300,
     questions: 15,
-    price: '849,00',
+    price: '849.00',
     href: '/products/9',
     hint: 'solar panel',
-    description: "Das tragbare 400W-Solarmodul von EcoFlow ist effizient und einfach zu bedienen. Mit einer hohen Solarleistung und einem verbesserten Wirkungsgrad von 23 % können Sie Ihre tragbare Powerstation noch schneller aufladen.",
+    description: "The portable 400W solar panel from EcoFlow is efficient and easy to use. With high solar output and an improved efficiency of 23%, you can charge your portable power station even faster.",
     features: [
-        "400W Leistung",
-        "23% Wirkungsgrad",
-        "Faltbar und tragbar",
-        "Wetterfest mit IP68-Zertifizierung"
+        "400W power",
+        "23% efficiency",
+        "Foldable and portable",
+        "Weatherproof with IP68 certification"
     ],
      specs: {
-        "Leistung": "400W",
-        "Wirkungsgrad": "23%",
-        "Gewicht": "16 kg (mit Tasche)",
-        "Abmessungen (aufgeklappt)": "105.8 x 236.5 x 2.5 cm"
+        "Power": "400W",
+        "Efficiency": "23%",
+        "Weight": "16 kg (with case)",
+        "Dimensions (unfolded)": "105.8 x 236.5 x 2.5 cm"
     }
   },
   {
@@ -247,21 +247,21 @@ export const products: Product[] = [
     rating: 4.7,
     reviews: 500,
     questions: 20,
-    price: '299,00',
+    price: '299.00',
     href: '/products/10',
     hint: 'solar panel',
-    description: "Das Jackery SolarSaga 100W monokristalline Solarpanel wandelt mit einem hohen Umwandlungswirkungsgrad von bis zu 23% Sonnenenergie in erneuerbare Energie um. Es ist ideal für Outdoor-Aktivitäten und den Notfalleinsatz zu Hause.",
+    description: "The Jackery SolarSaga 100W monocrystalline solar panel converts solar energy into renewable energy with a high conversion efficiency of up to 23%. It is ideal for outdoor activities and emergency use at home.",
     features: [
-        "Hoher Umwandlungswirkungsgrad von bis zu 23%",
-        "Leicht und tragbar",
-        "Zwei USB-Ausgänge zum direkten Laden von Geräten",
-        "Langlebig und spritzwassergeschützt"
+        "High conversion efficiency of up to 23%",
+        "Lightweight and portable",
+        "Two USB outputs for direct device charging",
+        "Durable and splash-proof"
     ],
     specs: {
-        "Leistung": "100W",
-        "Wirkungsgrad": "23%",
-        "Gewicht": "4.69 kg",
-        "Ausgänge": "USB-A und USB-C"
+        "Power": "100W",
+        "Efficiency": "23%",
+        "Weight": "4.69 kg",
+        "Outputs": "USB-A and USB-C"
     }
   },
   {
@@ -272,21 +272,21 @@ export const products: Product[] = [
     rating: 4.5,
     reviews: 80,
     questions: 6,
-    price: '1.799,00',
+    price: '1,799.00',
     href: '/products/11',
     hint: 'home battery',
-    description: "Die SuperBase Pro 2000 ist eine 2.096Wh Powerstation, die in nur einer Stunde auf 80 % aufgeladen werden kann. Mit 14 Ausgangsports und einem 2.000W-Ausgang ist sie die perfekte Stromversorgungslösung für unterwegs, zu Hause oder bei der Arbeit.",
+    description: "The SuperBase Pro 2000 is a 2,096Wh power station that can be charged to 80% in just one hour. With 14 output ports and a 2,000W output, it is the perfect power solution for on the go, at home, or at work.",
     features: [
-        "2096Wh Kapazität, 2000W AC-Ausgang",
-        "In 1 Stunde auf 80% aufgeladen",
-        "Integriertes 4G IoT und GPS",
-        "Robuste Räder und ausziehbarer Griff für einfachen Transport"
+        "2096Wh capacity, 2000W AC output",
+        "Charged to 80% in 1 hour",
+        "Integrated 4G IoT and GPS",
+        "Robust wheels and extendable handle for easy transport"
     ],
     specs: {
-        "Kapazität": "2096Wh",
-        "AC-Ausgang": "2000W",
-        "Anschlüsse": "14 Ausgänge",
-        "Gewicht": "21.2 kg"
+        "Capacity": "2096Wh",
+        "AC Output": "2000W",
+        "Ports": "14 outputs",
+        "Weight": "21.2 kg"
     }
   },
   {
@@ -297,21 +297,21 @@ export const products: Product[] = [
     rating: 4.8,
     reviews: 45,
     questions: 4,
-    price: '1.599,00',
+    price: '1,599.00',
     href: '/products/12',
     hint: 'home battery',
-    description: "Das EcoFlow Smart Home Panel ist das Herzstück Ihres Heim-Backup-Ökosystems. Es integriert Ihre DELTA Pro Powerstation direkt mit Ihrem Zuhause, sodass Sie bei einem Stromausfall bis zu 10 Ihrer Heimstromkreise mit Strom versorgen können.",
+    description: "The EcoFlow Smart Home Panel is the heart of your home backup ecosystem. It integrates your DELTA Pro power station directly with your home, so you can power up to 10 of your home circuits during a power outage.",
     features: [
-        "Bindet DELTA Pro in Ihr Zuhause ein",
-        "Intelligentes Energiemanagement",
-        "Steuerung über die EcoFlow-App",
-        "Unterbrechungsfreie Stromversorgung bei Stromausfällen"
+        "Integrates DELTA Pro into your home",
+        "Smart energy management",
+        "Control via the EcoFlow app",
+        "Uninterruptible power supply during power outages"
     ],
     specs: {
-        "Kompatibilität": "EcoFlow DELTA Pro",
-        "Max. Leistung": "7200W",
-        "Steuerbare Stromkreise": "10",
-        "Spannung": "240V"
+        "Compatibility": "EcoFlow DELTA Pro",
+        "Max. Power": "7200W",
+        "Controllable Circuits": "10",
+        "Voltage": "240V"
     }
   },
 ];

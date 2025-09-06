@@ -8,48 +8,48 @@ export default function InfoZeroTax() {
       <Header />
       <main className="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="max-w-3xl mx-auto prose dark:prose-invert">
-          <h1 className="text-4xl font-bold">Informationen zum Nullsteuersatz für Photovoltaikanlagen (§ 12 Abs. 3 UstG)</h1>
+          <h1 className="text-4xl font-bold">Information on the Zero Tax Rate for Photovoltaic Systems (§ 12 Abs. 3 UstG)</h1>
           
           <p className="lead">
-            Seit dem 1. Januar 2023 gilt für die Lieferung und Installation von Photovoltaikanlagen und deren wesentlichen Komponenten, einschließlich Stromspeichern, ein Nullsteuersatz. Dies ist im Umsatzsteuergesetz (§ 12 Abs. 3 UstG) geregelt. Wir freuen uns, diesen Steuervorteil an Sie weiterzugeben.
+            Since January 1, 2023, a zero tax rate has applied to the supply and installation of photovoltaic systems and their essential components, including electricity storage systems. This is regulated in the German VAT Act (§ 12 para. 3 UstG). We are pleased to pass this tax advantage on to you.
           </p>
 
-          <h2 className="mt-8 text-2xl font-bold">Wer ist für den Nullsteuersatz berechtigt?</h2>
+          <h2 className="mt-8 text-2xl font-bold">Who is eligible for the zero tax rate?</h2>
           <p>
-            Der Nullsteuersatz gilt für Sie, wenn Sie folgende Bedingungen erfüllen:
+            The zero tax rate applies to you if you meet the following conditions:
           </p>
           <ul>
-            <li>Sie sind der Betreiber der Photovoltaikanlage.</li>
-            <li>Die Anlage wird auf oder in der Nähe eines Privathauses, einer Wohnung oder eines öffentlichen oder anderen Gebäudes installiert, das für dem Gemeinwohl dienende Tätigkeiten genutzt wird.</li>
-            <li>Die installierte Bruttoleistung der Anlage überschreitet 30 kW (peak) nicht.</li>
+            <li>You are the operator of the photovoltaic system.</li>
+            <li>The system is installed on or near a private house, an apartment, or a public or other building used for activities serving the common good.</li>
+            <li>The installed gross capacity of the system does not exceed 30 kW (peak).</li>
           </ul>
 
-          <h2 className="mt-8 text-2xl font-bold">Wie funktioniert das in unserem Shop?</h2>
+          <h2 className="mt-8 text-2xl font-bold">How does this work in our shop?</h2>
           <p>
-            Bei berechtigten Produkten sehen Sie auf der Produktseite eine Auswahlmöglichkeit, um zu bestätigen, dass Sie die Voraussetzungen für den Nullsteuersatz erfüllen. Mit der Auswahl dieser Option wird der Preis ohne Mehrwertsteuer (0% MwSt.) angezeigt und berechnet.
+            For eligible products, you will see a selection option on the product page to confirm that you meet the requirements for the zero tax rate. By selecting this option, the price will be displayed and calculated without VAT (0% VAT).
           </p>
           <p>
-            Mit dieser Auswahl und dem Abschluss des Kaufs bestätigen Sie uns rechtsverbindlich, dass Sie die Voraussetzungen erfüllen. Es sind keine weiteren Formulare notwendig.
+            By making this selection and completing the purchase, you legally confirm that you meet the requirements. No further forms are necessary.
           </p>
           
-          <h2 className="mt-8 text-2xl font-bold">Welche Produkte sind betroffen?</h2>
+          <h2 className="mt-8 text-2xl font-bold">Which products are affected?</h2>
           <p>
-            Der Nullsteuersatz gilt für Photovoltaikanlagen sowie für deren betriebswesentliche Komponenten. Dazu gehören zum Beispiel:
+            The zero tax rate applies to photovoltaic systems as well as their essential operating components. These include, for example:
           </p>
            <ul>
-            <li>Solarmodule</li>
-            <li>Wechselrichter</li>
-            <li>Dachmontagesysteme</li>
-            <li>Stromspeicher (Batterien)</li>
-            <li>Verkabelungs- und Anschlusskomponenten</li>
+            <li>Solar modules</li>
+            <li>Inverters</li>
+            <li>Roof mounting systems</li>
+            <li>Electricity storage (batteries)</li>
+            <li>Cabling and connection components</li>
           </ul>
 
-          <h2 className="mt-8 text-2xl font-bold">Haftungsausschluss</h2>
+          <h2 className="mt-8 text-2xl font-bold">Disclaimer</h2>
           <p>
-            Diese Informationen wurden nach bestem Wissen und Gewissen zusammengestellt. Sie stellen jedoch keine Steuerberatung dar und ersetzen nicht die professionelle Beratung durch einen Steuerberater. Alle Angaben sind ohne Gewähr.
+            This information has been compiled to the best of our knowledge and belief. However, it does not constitute tax advice and does not replace professional advice from a tax consultant. All information is without guarantee.
           </p>
           <p>
-            Bei Fragen zögern Sie bitte nicht, uns zu <Link href="/contact">kontaktieren</Link>.
+            If you have any questions, please do not hesitate to <Link href="/contact">contact us</Link>.
           </p>
         </div>
       </main>

@@ -12,11 +12,11 @@ import { Trash2, X } from 'lucide-react';
 import { ScrollArea } from './ui/scroll-area';
 
 const formatPrice = (price: number) => {
-  return new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(price);
+  return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price);
 };
 
 const parsePrice = (priceString: string): number => {
-    const cleanedString = priceString.replace('€', '').replace(/\./g, '').replace(',', '.').trim();
+    const cleanedString = priceString.replace('$', '').replace(/,/g, '').trim();
     const price = parseFloat(cleanedString.split(' - ')[0]);
     return isNaN(price) ? 0 : price;
 }
@@ -33,16 +33,16 @@ export function CartDrawer() {
     <div className="flex h-full flex-col">
       <SheetHeader className="p-6">
         <SheetTitle className="flex justify-between items-center">
-            Ihr Warenkorb ({cart.length})
+            Your Cart ({cart.length})
         </SheetTitle>
       </SheetHeader>
       <Separator />
       {cart.length === 0 ? (
         <div className="flex flex-1 flex-col items-center justify-center text-center">
-          <p className="text-xl text-muted-foreground mb-4">Ihr Warenkorb ist leer.</p>
+          <p className="text-xl text-muted-foreground mb-4">Your cart is empty.</p>
           <SheetClose asChild>
             <Button asChild>
-                <Link href="/">Weiter einkaufen</Link>
+                <Link href="/">Continue Shopping</Link>
             </Button>
           </SheetClose>
         </div>
@@ -55,7 +55,7 @@ export function CartDrawer() {
                   <Image src={item.image} alt={item.name} width={80} height={80} className="rounded-md" />
                   <div className="flex-grow">
                     <p className="font-semibold text-sm">{item.name}</p>
-                    <p className="text-xs text-muted-foreground">€{item.price}</p>
+                    <p className="text-xs text-muted-foreground">${item.price}</p>
                      <div className="flex items-center gap-2 mt-2">
                         <Input
                             type="number"
@@ -79,11 +79,11 @@ export function CartDrawer() {
           <SheetFooter className="p-6 border-t">
              <div className="w-full space-y-4">
                 <div className="flex justify-between font-bold text-lg">
-                    <span>Gesamtsumme</span>
+                    <span>Subtotal</span>
                     <span>{formatPrice(subtotal)}</span>
                 </div>
-                <Button size="lg" className="w-full">Zur Kasse gehen</Button>
-                <Button variant="outline" className="w-full" onClick={clearCart}>Warenkorb leeren</Button>
+                <Button size="lg" className="w-full">Proceed to Checkout</Button>
+                <Button variant="outline" className="w-full" onClick={clearCart}>Clear Cart</Button>
             </div>
           </SheetFooter>
         </>

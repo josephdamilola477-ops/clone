@@ -15,41 +15,41 @@ export default function NewProductPage() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Neues Produkt hinzufügen</CardTitle>
+        <CardTitle>Add New Product</CardTitle>
         <CardDescription>
-          Füllen Sie die Details aus, um ein neues Produkt zu Ihrem Shop hinzuzufügen.
+          Fill in the details to add a new product to your shop.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <form className="grid gap-6">
           <div className="grid gap-3">
             <Label htmlFor="name">Name</Label>
-            <Input id="name" type="text" placeholder="z.B. EcoFlow DELTA 2" />
+            <Input id="name" type="text" placeholder="e.g. EcoFlow DELTA 2" />
           </div>
           <div className="grid gap-3">
-            <Label htmlFor="brand">Marke</Label>
-            <Input id="brand" type="text" placeholder="z.B. EcoFlow" />
+            <Label htmlFor="brand">Brand</Label>
+            <Input id="brand" type="text" placeholder="e.g. EcoFlow" />
           </div>
           <div className="grid gap-3">
-            <Label htmlFor="description">Beschreibung</Label>
+            <Label htmlFor="description">Description</Label>
             <Textarea
               id="description"
-              placeholder="Geben Sie eine detaillierte Produktbeschreibung ein..."
+              placeholder="Enter a detailed product description..."
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="grid gap-3">
-              <Label htmlFor="price">Preis</Label>
-              <Input id="price" type="text" placeholder="z.B. 999,00 oder 39.00 - 79.00" />
+              <Label htmlFor="price">Price</Label>
+              <Input id="price" type="text" placeholder="e.g. 999.00 or 39.00 - 79.00" />
             </div>
              <div className="grid gap-3">
-              <Label htmlFor="image">Bild-URL</Label>
+              <Label htmlFor="image">Image URL</Label>
               <Input id="image" type="text" placeholder="https://picsum.photos/seed/..." />
             </div>
           </div>
           <div className="flex justify-end gap-2">
-            <Button variant="outline">Abbrechen</Button>
-            <Button>Produkt speichern</Button>
+            <Button variant="outline">Cancel</Button>
+            <Button>Save Product</Button>
           </div>
         </form>
       </CardContent>

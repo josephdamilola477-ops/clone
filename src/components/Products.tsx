@@ -28,7 +28,7 @@ const StarRating = ({ rating, reviews }: { rating: number; reviews: number }) =>
         ))}
       </div>
       <span className="text-xs text-muted-foreground">
-        {reviews > 0 ? `${rating.toFixed(1)} | (${reviews})` : 'Keine Bewertungen'}
+        {reviews > 0 ? `${rating.toFixed(1)} | (${reviews})` : 'No reviews'}
       </span>
     </div>
   );
@@ -43,8 +43,8 @@ export function Products() {
     e.preventDefault();
     addToCart(product);
     toast({
-      title: "Produkt hinzugefügt",
-      description: `${product.name} wurde Ihrem Warenkorb hinzugefügt.`,
+      title: "Product added",
+      description: `${product.name} has been added to your cart.`,
     });
   }
 
@@ -52,9 +52,9 @@ export function Products() {
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold">Kaufen Sie unsere Produkte</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Shop Our Products</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                Finden Sie die perfekte Energielösung für Ihre Bedürfnisse.
+                Find the perfect power solution for your needs.
             </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -76,7 +76,7 @@ export function Products() {
                       onClick={(e) => handleAddToCart(e, product)}
                     >
                       <ShoppingCart className="mr-2 h-5 w-5" />
-                      In den Warenkorb
+                      Add to Cart
                     </Button>
                   </div>
                 </div>
@@ -101,10 +101,10 @@ export function Products() {
                 
                 <div className="mt-2 flex items-center gap-1.5 text-xs text-muted-foreground">
                     <MessageCircle className="h-4 w-4" />
-                    <span>{product.questions > 0 ? `${product.questions} Frage${product.questions > 1 ? 'n' : ''}` : 'Keine Fragen'}</span>
+                    <span>{product.questions > 0 ? `${product.questions} Question${product.questions > 1 ? 's' : ''}` : 'No questions'}</span>
                 </div>
 
-                <p className="mt-3 font-semibold text-foreground text-base">€{product.price.replace(' - ', ' - €')}</p>
+                <p className="mt-3 font-semibold text-foreground text-base">${product.price.replace(' - ', ' - $')}</p>
               </div>
             </div>
           ))}

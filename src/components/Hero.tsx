@@ -15,7 +15,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-black/30" />
       <div className="relative z-10 text-center animate-fade-in">
         <Button size="lg" variant="outline" className="bg-white/90 text-foreground hover:bg-white text-lg font-bold py-6 px-8 rounded-sm animate-slide-in-up">
-            ECOFLOW PRODUKTE ENTDECKEN
+            DISCOVER ECOFLOW PRODUCTS
         </Button>
       </div>
     </section>

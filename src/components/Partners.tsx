@@ -21,12 +21,12 @@ export function Partners() {
                 <div className="text-center">
                     <h2 className="text-4xl font-bold text-gray-800">MarcMax-Media</h2>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-                        Fachhändler für hochwertige Elektronik- & Technik-Produkte - ausgewählt und getestet von Experten.
+                        Specialist dealer for high-quality electronics & technology products - selected and tested by experts.
                     </p>
                 </div>
 
                 <div className="mt-16 text-center">
-                  <h3 className="text-2xl font-bold text-gray-800">Unsere Marken</h3>
+                  <h3 className="text-2xl font-bold text-gray-800">Our Brands</h3>
                   <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-8 items-center justify-center">
                       {partners.slice(0, 7).map((partner) => (
                           <div key={partner.name} className="flex justify-center">

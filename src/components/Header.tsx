@@ -82,9 +82,9 @@ function TopBar() {
         <div className="bg-gray-900 text-white text-xs py-2 hidden md:block">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
-                    <span>Produkte sofort lieferbar</span>
-                    <span>Bestellung vor Ort nach Terminabsprache abholbar</span>
-                    <span>Kostenfreier Versand in Deutschland</span>
+                    <span>Products available for immediate delivery</span>
+                    <span>On-site pickup available by appointment</span>
+                    <span>Free shipping in Germany</span>
                 </div>
             </div>
         </div>
@@ -123,8 +123,8 @@ export function Header() {
 
             <div className="hidden md:flex flex-1 justify-end items-center gap-4">
                 <nav className="flex items-center space-x-6">
-                    <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">ANGEBOT ANFRAGEN</Link>
-                    <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">KONTAKT</Link>
+                    <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">REQUEST A QUOTE</Link>
+                    <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">CONTACT</Link>
                     <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">%OUTLET%</Link>
                 </nav>
                 <div className="flex items-center gap-2">
@@ -161,8 +161,8 @@ export function Header() {
                         </Button>
                     </div>
                     <nav className="flex-1 flex flex-col gap-4 p-4">
-                        <Link href="/contact" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>ANGEBOT ANFRAGEN</Link>
-                        <Link href="/contact" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>KONTAKT</Link>
+                        <Link href="/contact" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>REQUEST A QUOTE</Link>
+                        <Link href="/contact" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>CONTACT</Link>
                         <Link href="#" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>%OUTLET%</Link>
                     </nav>
                     <div className="p-4 border-t flex justify-around">

@@ -7,44 +7,44 @@ export default function TermsAndConditions() {
       <Header />
       <main className="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="max-w-3xl mx-auto prose dark:prose-invert">
-          <h1 className="text-4xl font-bold">Allgemeine Geschäftsbedingungen</h1>
-          <p className="text-muted-foreground">Zuletzt aktualisiert: {new Date().toLocaleDateString('de-DE', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+          <h1 className="text-4xl font-bold">Terms and Conditions</h1>
+          <p className="text-muted-foreground">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
 
-          <h2 className="mt-8 text-2xl font-bold">1. Zustimmung zu den Bedingungen</h2>
+          <h2 className="mt-8 text-2xl font-bold">1. Agreement to Terms</h2>
           <p>
-            Durch den Zugriff auf diese Website gehen wir davon aus, dass Sie diese Allgemeinen Geschäftsbedingungen akzeptieren. Nutzen Sie den MarcMax Shop nicht weiter, wenn Sie nicht allen auf dieser Seite genannten Bedingungen zustimmen.
+            By accessing this website, we assume you accept these terms and conditions. Do not continue to use MarcMax Shop if you do not agree to all of the terms and conditions stated on this page.
           </p>
 
           <h2 className="mt-8 text-2xl font-bold">2. Cookies</h2>
           <p>
-            Wir verwenden Cookies. Durch den Zugriff auf den MarcMax Shop haben Sie der Verwendung von Cookies in Übereinstimmung mit der Datenschutzerklärung der MarcMax-Media GmbH zugestimmt. Die meisten interaktiven Websites verwenden Cookies, um die Benutzerdaten für jeden Besuch abzurufen.
+            We employ the use of cookies. By accessing MarcMax Shop, you agreed to use cookies in agreement with the MarcMax-Media GmbH's Privacy Policy. Most interactive websites use cookies to let us retrieve the user's details for each visit.
           </p>
 
-          <h2 className="mt-8 text-2xl font-bold">3. Lizenz</h2>
+          <h2 className="mt-8 text-2xl font-bold">3. License</h2>
           <p>
-            Sofern nicht anders angegeben, besitzen die MarcMax-Media GmbH und/oder ihre Lizenzgeber die geistigen Eigentumsrechte für alle Materialien im MarcMax Shop. Alle geistigen Eigentumsrechte sind vorbehalten. Sie können für Ihren eigenen persönlichen Gebrauch darauf zugreifen, vorbehaltlich der in diesen Bedingungen festgelegten Einschränkungen.
+            Unless otherwise stated, MarcMax-Media GmbH and/or its licensors own the intellectual property rights for all material on MarcMax Shop. All intellectual property rights are reserved. You may access this from MarcMax Shop for your own personal use subjected to restrictions set in these terms and conditions.
           </p>
-          <p>Sie dürfen nicht:</p>
+          <p>You must not:</p>
           <ul>
-              <li>Material aus dem MarcMax Shop wiederveröffentlichen</li>
-              <li>Material aus dem MarcMax Shop verkaufen, vermieten oder unterlizenzieren</li>
-              <li>Material aus dem MarcMax Shop reproduzieren, duplizieren oder kopieren</li>
-              <li>Inhalte aus dem MarcMax Shop weiterverbreiten</li>
+              <li>Republish material from MarcMax Shop</li>
+              <li>Sell, rent or sub-license material from MarcMax Shop</li>
+              <li>Reproduce, duplicate or copy material from MarcMax Shop</li>
+              <li>Redistribute content from MarcMax Shop</li>
           </ul>
 
-          <h2 className="mt-8 text-2xl font-bold">4. Versand und Lieferung</h2>
+          <h2 className="mt-8 text-2xl font-bold">4. Shipping and Delivery</h2>
           <p>
-            Wir bieten den Versand an Adressen innerhalb Deutschlands an. Alle Bestellungen werden innerhalb von 1-2 Werktagen bearbeitet. Die Versandzeiten sind Schätzungen und beginnen ab dem Versanddatum, nicht ab dem Bestelldatum. Wir sind nicht verantwortlich für Verzögerungen, die durch den Spediteur verursacht werden.
+            We offer shipping to addresses within Germany. All orders are processed within 1-2 business days. Shipping times are estimates and commence from the date of shipping, rather than the date of order. We are not responsible for any delays caused by the carrier.
           </p>
 
-          <h2 className="mt-8 text-2xl font-bold">5. Rückgabe und Rückerstattung</h2>
+          <h2 className="mt-8 text-2xl font-bold">5. Returns and Refunds</h2>
           <p>
-            Unsere Rückgabefrist beträgt 30 Tage. Wenn seit Ihrem Kauf 30 Tage vergangen sind, können wir Ihnen leider keine Rückerstattung oder keinen Umtausch anbieten. Um für eine Rücksendung in Frage zu kommen, muss Ihr Artikel unbenutzt und in demselben Zustand sein, in dem Sie ihn erhalten haben. Er muss sich auch in der Originalverpackung befinden.
+            Our return policy is 30 days. If 30 days have gone by since your purchase, unfortunately, we can’t offer you a refund or exchange. To be eligible for a return, your item must be unused and in the same condition that you received it. It must also be in the original packaging.
           </p>
 
-          <h2 className="mt-8 text-2xl font-bold">6. Geltendes Recht</h2>
+          <h2 className="mt-8 text-2xl font-bold">6. Governing Law</h2>
           <p>
-            Diese Allgemeinen Geschäftsbedingungen unterliegen den Gesetzen Deutschlands und werden in Übereinstimmung mit diesen ausgelegt, und Sie unterwerfen sich unwiderruflich der ausschließlichen Zuständigkeit der Gerichte in diesem Staat oder an diesem Ort.
+            These Terms and Conditions are governed by and construed in accordance with the laws of Germany and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.
           </p>
         </div>
       </main>

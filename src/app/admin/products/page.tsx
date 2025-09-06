@@ -34,15 +34,15 @@ export default function ProductsPage() {
       <CardHeader>
         <div className="flex items-center justify-between">
             <div>
-                <CardTitle>Produkte</CardTitle>
+                <CardTitle>Products</CardTitle>
                 <CardDescription>
-                Verwalten Sie Ihre Produkte und sehen Sie deren Verkaufsleistung.
+                Manage your products and view their sales performance.
                 </CardDescription>
             </div>
             <Button asChild size="sm" className="gap-1">
               <Link href="/admin/products/new">
                 <PlusCircle className="h-4 w-4" />
-                Produkt hinzufügen
+                Add Product
               </Link>
             </Button>
         </div>
@@ -52,13 +52,13 @@ export default function ProductsPage() {
           <TableHeader>
             <TableRow>
               <TableHead className="hidden w-[100px] sm:table-cell">
-                <span className="sr-only">Bild</span>
+                <span className="sr-only">Image</span>
               </TableHead>
               <TableHead>Name</TableHead>
-              <TableHead>Marke</TableHead>
-              <TableHead className="hidden md:table-cell">Preis</TableHead>
+              <TableHead>Brand</TableHead>
+              <TableHead className="hidden md:table-cell">Price</TableHead>
               <TableHead>
-                <span className="sr-only">Aktionen</span>
+                <span className="sr-only">Actions</span>
               </TableHead>
             </TableRow>
           </TableHeader>
@@ -79,7 +79,7 @@ export default function ProductsPage() {
                   <Badge variant="outline">{product.brand}</Badge>
                 </TableCell>
                 <TableCell className="hidden md:table-cell">
-                  €{product.price}
+                  ${product.price}
                 </TableCell>
                 <TableCell>
                   <DropdownMenu>
@@ -90,9 +90,9 @@ export default function ProductsPage() {
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
-                      <DropdownMenuLabel>Aktionen</DropdownMenuLabel>
-                      <DropdownMenuItem>Bearbeiten</DropdownMenuItem>
-                      <DropdownMenuItem>Löschen</DropdownMenuItem>
+                      <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                      <DropdownMenuItem>Edit</DropdownMenuItem>
+                      <DropdownMenuItem>Delete</DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </TableCell>

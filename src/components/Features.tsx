@@ -3,18 +3,18 @@ import { Award, Box, ShieldCheck, Zap } from 'lucide-react';
 const features = [
   {
     icon: <Award className="h-8 w-8 text-primary" />,
-    title: '5 Jahre Garantie',
-    description: 'Wir stehen zu unseren Produkten mit einer 5-Jahres-Garantie.',
+    title: '5 Year Warranty',
+    description: 'We stand by our products with a 5-year warranty.',
   },
   {
     icon: <Box className="h-8 w-8 text-primary" />,
-    title: 'Kostenloser Versand & Rückgabe',
-    description: 'Genießen Sie kostenlosen Versand und Rückgabe bei allen Bestellungen.',
+    title: 'Free Shipping & Returns',
+    description: 'Enjoy free shipping and returns on all orders.',
   },
   {
     icon: <ShieldCheck className="h-8 w-8 text-primary" />,
-    title: 'Sichere Zahlungen',
-    description: 'Ihre Zahlungen sind mit unserer verschlüsselten Kasse sicher.',
+    title: 'Secure Payments',
+    description: 'Your payments are secure with our encrypted checkout.',
   },
 ];
 

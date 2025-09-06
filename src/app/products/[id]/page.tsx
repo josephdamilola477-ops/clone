@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/accordion"
 import { CartContext } from '@/context/CartContext';
 import { useToast } from '@/hooks/use-toast';
+import React from 'react';
 
 const StarRating = ({ rating, reviews }: { rating: number; reviews: number }) => {
   const fullStars = Math.floor(rating);
@@ -37,7 +38,7 @@ const StarRating = ({ rating, reviews }: { rating: number; reviews: number }) =>
         ))}
       </div>
       <span className="text-sm text-muted-foreground">
-        {reviews > 0 ? `${rating.toFixed(1)} (${reviews} Bewertungen)` : 'Keine Bewertungen'}
+        {reviews > 0 ? `${rating.toFixed(1)} (${reviews} reviews)` : 'No reviews'}
       </span>
     </div>
   );
@@ -58,8 +59,8 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   const handleAddToCart = () => {
     addToCart(product, quantity);
     toast({
-      title: "Produkt hinzugefügt",
-      description: `${quantity}x ${product.name} wurde Ihrem Warenkorb hinzugefügt.`,
+      title: "Product Added",
+      description: `${quantity}x ${product.name} has been added to your cart.`,
     });
   };
 
@@ -91,14 +92,14 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 <Separator orientation="vertical" className="h-5" />
                 <a href="#" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary">
                     <MessageCircle className="h-5 w-5" />
-                    {product.questions} Fragen
+                    {product.questions} Questions
                 </a>
             </div>
 
             <p className="text-lg">{product.description}</p>
             
             <div className="text-4xl font-bold">
-                €{product.price.replace(/\./g, ',')}
+                ${product.price.replace(',', '.')}
             </div>
 
             <div className="flex items-center gap-4">
@@ -119,7 +120,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               </div>
               <Button size="lg" className="flex-1" onClick={handleAddToCart}>
                 <ShoppingCart className="mr-2 h-5 w-5"/>
-                In den Warenkorb
+                Add to Cart
               </Button>
             </div>
             
@@ -128,7 +129,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             <Accordion type="single" collapsible className="w-full" defaultValue="features">
               {product.features && (
                 <AccordionItem value="features">
-                    <AccordionTrigger className="text-lg font-medium">Eigenschaften</AccordionTrigger>
+                    <AccordionTrigger className="text-lg font-medium">Features</AccordionTrigger>
                     <AccordionContent>
                     <ul className="list-disc space-y-2 pl-6">
                         {product.features.map((feature, index) => (
@@ -140,7 +141,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               )}
               {product.specs && (
                 <AccordionItem value="specs">
-                    <AccordionTrigger className="text-lg font-medium">Technische Daten</AccordionTrigger>
+                    <AccordionTrigger className="text-lg font-medium">Specifications</AccordionTrigger>
                     <AccordionContent>
                     <div className="grid grid-cols-2 gap-x-4 gap-y-2">
                         {Object.entries(product.specs).map(([key, value]) => (
