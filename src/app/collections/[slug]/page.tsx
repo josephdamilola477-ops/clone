@@ -104,7 +104,9 @@ function ProductCard({ product }: { product: Product }) {
 }
 
 export default function CollectionPage({ params }: { params: { slug: string } }) {
-    const collectionName = params.slug.replace(/-/g, ' ').replace(/percent/g, '%');
+    const pathname = usePathname();
+    const slug = pathname.split('/').pop() || '';
+    const collectionName = decodeURIComponent(slug).replace(/-/g, ' ').replace(/percent/g, '%');
     const collectionProducts = products.filter(p => p.collection && p.collection.toLowerCase() === collectionName.toLowerCase());
 
     const title = collectionName
