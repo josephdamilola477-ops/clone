@@ -11,7 +11,8 @@ import { CartContext } from '@/context/CartContext';
 import { Product, products } from '@/lib/products';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { notFound } from 'next/navigation';
+import { notFound, usePathname } from 'next/navigation';
+import React from 'react';
 
 const StarRating = ({ rating, reviews }: { rating: number; reviews: number }) => {
   const fullStars = Math.floor(rating);
