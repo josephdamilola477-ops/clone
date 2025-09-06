@@ -243,7 +243,7 @@ export const products: Product[] = [
     id: 'sanus-era-300-wall-mount',
     brand: 'SANUS',
     name: 'SANUS ERA 300 wall mount',
-    price: '44.99',
+    price: '54.99',
     image: 'https://picsum.photos/seed/sanus-era300-wall/400/400',
     rating: 5.0,
     reviews: 1,
@@ -409,3 +409,5 @@ export const products: Product[] = [
     collection: 'Everything for Home',
   }
 ];
+
+    
