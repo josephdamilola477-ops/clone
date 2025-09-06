@@ -14,6 +14,7 @@ export interface Product {
     description?: string;
     features?: string[];
     specs?: { [key: string]: string };
+    collection?: string;
 }
 
 export const products: Product[] = [
@@ -28,6 +29,7 @@ export const products: Product[] = [
     questions: 0,
     href: '/products/aiko-a465',
     hint: 'solar panel',
+    collection: '0 % Bestandsartikel',
   },
   {
     id: 'anker-548-powerbank',
@@ -40,6 +42,7 @@ export const products: Product[] = [
     questions: 0,
     href: '/products/anker-548-powerbank',
     hint: 'power bank',
+    collection: 'Powerbanks',
   },
   {
     id: 'anker-737-powerbank',
@@ -52,6 +55,7 @@ export const products: Product[] = [
     questions: 0,
     href: '/products/anker-737-powerbank',
     hint: 'power bank',
+    collection: 'Powerbanks',
   },
   {
     id: 'anker-prime-powerbank',
@@ -64,6 +68,7 @@ export const products: Product[] = [
     questions: 0,
     href: '/products/anker-prime-powerbank',
     hint: 'power bank',
+    collection: 'Powerbanks',
   },
   {
     id: 'ecoflow-delta-2-bware',
@@ -76,6 +81,7 @@ export const products: Product[] = [
     questions: 0,
     href: '/products/ecoflow-delta-2-bware',
     hint: 'power station',
+    collection: 'EcoFlow Outlet',
   },
   {
     id: 'ecoflow-river-2-bware',
@@ -88,6 +94,7 @@ export const products: Product[] = [
     questions: 0,
     href: '/products/ecoflow-river-2-bware',
     hint: 'power station',
+    collection: 'EcoFlow Outlet',
   },
   {
     id: 'ecoflow-delta-pro-bware',
@@ -100,6 +107,7 @@ export const products: Product[] = [
     questions: 0,
     href: '/products/ecoflow-delta-pro-bware',
     hint: 'power station',
+    collection: 'EcoFlow Outlet',
   },
   {
     id: 'ecoflow-river-2-pro-bware',
@@ -112,6 +120,7 @@ export const products: Product[] = [
     questions: 0,
     href: '/products/ecoflow-river-2-pro-bware',
     hint: 'power station',
+    collection: 'Outlet',
   },
   {
     id: 'ugreen-solarpanel-bware',
@@ -124,6 +133,7 @@ export const products: Product[] = [
     questions: 0,
     href: '/products/ugreen-solarpanel-bware',
     hint: 'solar panel',
+    collection: 'Outlet',
   },
   {
     id: 'roborock-s8-pro-ultra-bware',
@@ -136,6 +146,7 @@ export const products: Product[] = [
     questions: 0,
     href: '/products/roborock-s8-pro-ultra-bware',
     hint: 'robot vacuum',
+    collection: 'Roborock',
   },
   {
     id: 'zendure-solarflow-hub-bware',
@@ -148,6 +159,7 @@ export const products: Product[] = [
     questions: 0,
     href: '/products/zendure-solarflow-hub-bware',
     hint: 'solar hub',
+    collection: 'Zendure Outlet',
   },
   {
     id: 'zendure-solarflow-ab2000-bware',
@@ -160,6 +172,7 @@ export const products: Product[] = [
     questions: 0,
     href: '/products/zendure-solarflow-ab2000-bware',
     hint: 'solar battery',
+    collection: 'Zendure Outlet',
   },
   {
     id: 'dometic-cfx3-25-bware',
@@ -172,6 +185,7 @@ export const products: Product[] = [
     questions: 0,
     href: '/products/dometic-cfx3-25-bware',
     hint: 'cooler box',
+    collection: 'Dometic Outlet',
   },
   {
     id: 'dometic-cfx3-35-bware',
@@ -184,6 +198,7 @@ export const products: Product[] = [
     questions: 0,
     href: '/products/dometic-cfx3-35-bware',
     hint: 'cooler box',
+    collection: 'Dometic Outlet',
   },
   {
     id: 'trina-vertex-s-435w',
@@ -196,6 +211,7 @@ export const products: Product[] = [
     questions: 0,
     href: '/products/trina-vertex-s-435w',
     hint: 'solar panel',
+    collection: 'Trina Solar',
   },
   {
     id: 'trina-vertex-s-440w',
@@ -208,6 +224,7 @@ export const products: Product[] = [
     questions: 0,
     href: '/products/trina-vertex-s-440w',
     hint: 'solar panel',
+    collection: 'Trina Solar',
   },
   {
     id: 'ecoflow-delta-3-plus',
@@ -220,5 +237,6 @@ export const products: Product[] = [
     questions: 0,
     href: '/products/ecoflow-delta-3-plus',
     hint: 'power station',
+    collection: 'EcoFlow Outlet',
   },
 ];

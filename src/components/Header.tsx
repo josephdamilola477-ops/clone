@@ -2,12 +2,21 @@
 import { useState, useEffect, useContext } from 'react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
-import { ShoppingCart, User, Menu, X, Search } from 'lucide-react';
+import { ShoppingCart, User, Menu, X, Search, ChevronDown } from 'lucide-react';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { CartContext } from '@/context/CartContext';
 import { Badge } from '@/components/ui/badge';
 import { CartDrawer } from './CartDrawer';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { products } from '@/lib/products';
+
+const collections = [...new Set(products.map(p => p.collection).filter(Boolean))];
 
 function Logo() {
     return (
@@ -124,6 +133,18 @@ export function Header() {
             <div className="hidden md:flex flex-1 justify-end items-center gap-4">
                 <nav className="flex items-center space-x-6">
                     <Link href="/products" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">PRODUCTS</Link>
+                    <DropdownMenu>
+                      <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary transition-colors outline-none">
+                        COLLECTIONS <ChevronDown className="h-4 w-4" />
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent>
+                        {collections.map(collection => (
+                          <DropdownMenuItem key={collection} asChild>
+                            <Link href={`/collections/${collection.toLowerCase().replace(/ /g, '-').replace(/%/g, 'percent')}`}>{collection}</Link>
+                          </DropdownMenuItem>
+                        ))}
+                      </DropdownMenuContent>
+                    </DropdownMenu>
                     <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">REQUEST A QUOTE</Link>
                     <Link href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">CONTACT</Link>
                     <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">%OUTLET%</Link>
@@ -163,6 +184,18 @@ export function Header() {
                     </div>
                     <nav className="flex-1 flex flex-col gap-4 p-4">
                         <Link href="/products" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>PRODUCTS</Link>
+                         <DropdownMenu>
+                          <DropdownMenuTrigger className="flex items-center gap-1 text-lg font-medium text-muted-foreground hover:text-primary transition-colors outline-none">
+                            COLLECTIONS <ChevronDown className="h-4 w-4" />
+                          </DropdownMenuTrigger>
+                          <DropdownMenuContent>
+                            {collections.map(collection => (
+                              <DropdownMenuItem key={collection} asChild>
+                                <Link href={`/collections/${collection.toLowerCase().replace(/ /g, '-').replace(/%/g, 'percent')}`}>{collection}</Link>
+                              </DropdownMenuItem>
+                            ))}
+                          </DropdownMenuContent>
+                        </DropdownMenu>
                         <Link href="/contact" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>REQUEST A QUOTE</Link>
                         <Link href="/contact" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>CONTACT</Link>
                         <Link href="#" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>%OUTLET%</Link>
