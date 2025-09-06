@@ -10,6 +10,7 @@ import { Nanoleaf } from "@/components/Nanoleaf";
 import { AboutUs } from "@/components/AboutUs";
 import { PremiumBrands } from "@/components/PremiumBrands";
 import { Location } from "@/components/Location";
+import { Collections } from "@/components/Collections";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <AboutUs />
         <Features />
         <Products />
+        <Collections />
         <Nanoleaf />
         <PremiumBrands />
         <Location />
