@@ -3,6 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { Roboto } from 'next/font/google';
 import { CartProvider } from '@/context/CartContext';
+import { ChatBubble } from '@/components/ChatBubble';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -26,6 +27,7 @@ export default function RootLayout({
         <CartProvider>
           {children}
           <Toaster />
+          <ChatBubble />
         </CartProvider>
       </body>
     </html>
