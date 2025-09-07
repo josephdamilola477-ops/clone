@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={`${roboto.variable} font-sans antialiased`}>
         <CartProvider>
           {children}
-          <Toaster />
+          
           <ChatBubble />
         </CartProvider>
       </body>
