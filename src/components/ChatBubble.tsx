@@ -17,7 +17,7 @@ export function ChatBubble() {
   }
 
   return (
-    <div className="fixed bottom-8 right-8 z-50">
+    <div className="fixed bottom-8 left-8 z-50">
       <Button
         size="lg"
         className="rounded-full h-16 bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 transition-transform hover:scale-110 flex items-center gap-3 px-6"
